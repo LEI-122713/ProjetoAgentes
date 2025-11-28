@@ -1,6 +1,6 @@
 from core.Simulator import Simulator
-from envs.AmbienteFarol import LighthouseEnv
-from agents.AgenteFarol import LighthouseAgent
+from ambientes.AmbienteFarol import LighthouseEnv
+from agentes.AgenteFarol import LighthouseAgent
 
 sim = Simulator()
 
