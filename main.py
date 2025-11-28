@@ -1,14 +1,14 @@
-from core.Simulator import Simulator
-from ambientes.AmbienteFarol import LighthouseEnv
-from agentes.AgenteFarol import LighthouseAgent
+from core.MotorDeSimulacao import MotorDeSimulacao
+from ambientes.AmbienteFarol import AmbienteFarol
+from agentes.AgenteFarol import AgenteFarol
 
-sim = Simulator()
+sim = MotorDeSimulacao()
 
-env = LighthouseEnv()
-ag = LighthouseAgent("A1")
+env = AmbienteFarol()
+ag = AgenteFarol("A1")
 
-sim.env = env
-sim.agents.append(ag)
-env.addAgent(ag, (0, 0))
+sim.ambiente = env
+sim.agentes.append(ag)
+env.adicionaAgente(ag, (0, 0))
 
-sim.execute()
+sim.executa()
