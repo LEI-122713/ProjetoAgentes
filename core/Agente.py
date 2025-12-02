@@ -10,16 +10,14 @@ class Agente:
     def cria(nome_do_ficheiro_parametros: str) -> "Agente":
         """
         Cria um agente a partir de um ficheiro de parâmetros.
-        No teu caso, para agentes concretos (AgenteFarol, etc.),
-        normalmente vais usar o construtor dessas subclasses.
-        Mas esta função cumpre o interface pedido.
+        Para agentes concretos (AgenteFarol, etc.) o normal é usar
+        o construtor dessas subclasses, mas esta função cumpre o interface pedido.
         """
         return Agente(nome_do_ficheiro_parametros)
 
     def observacao(self, obs: "Observacao"):
         """
         Recebe uma Observacao do ambiente e guarda como última observação.
-        (equivalente ao antigo observe)
         """
         self.ultima_observacao = obs
 
@@ -30,13 +28,19 @@ class Agente:
         """
         raise NotImplementedError
 
-    def avaliacaoEstadoAtual(self, recompensa: float):
+    def avaliacaoEstadoAtual(self, recompensa: float, nova_observacao=None, terminou: bool = False):
         """
         Permite ao agente atualizar a sua política com base na recompensa
         (usado no modo de Aprendizagem).
         Por omissão não faz nada; agentes com aprendizagem sobrepõem.
         """
         pass
+
+    def reset(self):
+        """
+        Reinicia estado interno do agente (por exemplo, antes de um novo episódio).
+        """
+        self.ultima_observacao = None
 
     def instala(self, sensor: "Sensor"):
         """

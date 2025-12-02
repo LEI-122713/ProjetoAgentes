@@ -1,0 +1,40 @@
+{
+  "episodios": 10,
+  "max_passos": 30,
+  "ficheiro_metricas": "metricas_farol.json",
+  "render": true,
+  "render_sleep": 0.0,
+  "ambiente": {
+    "tipo": "farol",
+    "largura": 7,
+    "altura": 7,
+    "farol": [6, 6],
+    "obstaculos": [[3, 3], [3, 4], [2, 5]]
+  },
+  "agentes": [
+    {
+      "nome": "A1",
+      "tipo": "farol",
+      "posicao_inicial": [0, 0],
+      "modo": "aprendizagem",
+      "q_table": "q_farol_A1.json",
+      "epsilon": 0.3,
+      "alpha": 0.5,
+      "gamma": 0.9,
+      "epsilon_min": 0.05,
+      "epsilon_decay": 0.99
+    },
+    {
+      "nome": "A2",
+      "tipo": "farol",
+      "posicao_inicial": [0, 1],
+      "modo": "aprendizagem",
+      "q_table": "q_farol_A2.json",
+      "epsilon": 0.3,
+      "alpha": 0.5,
+      "gamma": 0.9,
+      "epsilon_min": 0.05,
+      "epsilon_decay": 0.99
+    }
+  ]
+}

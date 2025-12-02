@@ -24,3 +24,9 @@ class Ambiente:
         (ex.: reposição de recursos, animações, etc.).
         """
         raise NotImplementedError
+
+    def reset(self):
+        """
+        Reinicia o estado do ambiente (para novo episódio).
+        """
+        raise NotImplementedError
