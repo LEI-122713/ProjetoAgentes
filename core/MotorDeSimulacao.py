@@ -17,6 +17,7 @@ class MotorDeSimulacao:
         self.logger = None
         self.render = False
         self.render_sleep = 0.0
+        self.gamma_desconto = 1.0
 
     # --- método estático pedido no enunciado ---
     @staticmethod
@@ -38,6 +39,7 @@ class MotorDeSimulacao:
         motor.ficheiro_metricas = parametros.get("ficheiro_metricas", motor.ficheiro_metricas)
         motor.render = parametros.get("render", motor.render)
         motor.render_sleep = parametros.get("render_sleep", motor.render_sleep)
+        motor.gamma_desconto = parametros.get("gamma_desconto", motor.gamma_desconto)
         motor._construir_ambiente(parametros.get("ambiente", {}))
         motor._construir_agentes(parametros.get("agentes", []))
         motor._construir_logger()
@@ -154,6 +156,7 @@ class MotorDeSimulacao:
         for ep in range(1, self.episodios + 1):
             print(f"===== EPISÓDIO {ep} =====")
             self._reset_episodio()
+            sucesso_ep = False
 
             for _ in range(self.max_passos):
                 self.passo_atual += 1
@@ -173,6 +176,9 @@ class MotorDeSimulacao:
 
                     pos = self.ambiente.posicoes_agentes.get(agente)
                     self.recompensa_total += recompensa
+                    # recompensa descontada simples: um fator por passo global
+                    fator = self.gamma_desconto ** max(self.passo_atual - 1, 0)
+                    self.recompensa_descontada_total += fator * recompensa
                     self.historico_passos.append({
                         "episodio": ep,
                         "passo": self.passo_atual,
@@ -185,6 +191,7 @@ class MotorDeSimulacao:
                     print(f"> {agente.nome} faz {accao.tipo}, recompensa {recompensa}, posição {pos}")
                     if terminou:
                         terminou_episodio = True
+                        sucesso_ep = True
 
                 # Atualização global do ambiente
                 self.ambiente.atualizacao()
@@ -199,16 +206,24 @@ class MotorDeSimulacao:
                 if hasattr(self.ambiente, "terminou") and callable(self.ambiente.terminou):
                     if self.ambiente.terminou():
                         terminou_episodio = True
+                        sucesso_ep = True
 
                 if terminou_episodio:
                     print("Condição de término atingida pelo ambiente/ação.")
                     break
 
             if self.logger:
-                self.logger.registar_episodio(ep, self.recompensa_total, self.passo_atual)
+                self.logger.registar_episodio(
+                    ep,
+                    self.recompensa_total,
+                    self.passo_atual,
+                    self.recompensa_descontada_total,
+                    sucesso_ep,
+                )
             self._guardar_politicas()
 
             print(f"Recompensa total do episódio {ep}: {self.recompensa_total}")
+            print(f"Recompensa descontada do episódio {ep}: {self.recompensa_descontada_total}")
             print(f"Passos executados: {self.passo_atual}")
 
             # preparar próximo episódio
@@ -220,6 +235,7 @@ class MotorDeSimulacao:
     def _reset_episodio(self):
         self.passo_atual = 0
         self.recompensa_total = 0.0
+        self.recompensa_descontada_total = 0.0
         self.historico_passos = []
         if hasattr(self.ambiente, "reset"):
             self.ambiente.reset()

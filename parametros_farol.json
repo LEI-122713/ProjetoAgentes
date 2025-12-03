@@ -1,7 +1,7 @@
 {
   "episodios": 10,
   "max_passos": 30,
-  "ficheiro_metricas": "metricas_farol.json",
+  "ficheiro_metricas": "metricas_farol_q_learning.json",
   "render": true,
   "render_sleep": 0.0,
   "ambiente": {

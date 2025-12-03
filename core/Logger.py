@@ -9,11 +9,13 @@ class Logger:
     def __init__(self):
         self.episodios = []
 
-    def registar_episodio(self, numero, recompensa_total, passos):
+    def registar_episodio(self, numero, recompensa_total, passos, recompensa_descontada=0.0, sucesso=False):
         self.episodios.append({
             "episodio": numero,
             "recompensa_total": recompensa_total,
+            "recompensa_descontada": recompensa_descontada,
             "passos": passos,
+            "sucesso": sucesso,
         })
 
     def guardar(self, ficheiro="metricas.json"):

@@ -13,10 +13,17 @@ class AgenteFarol(Agente):
         self.ultimo_estado = None
         self.ultima_accao = None
         self.ficheiro_qtable = ficheiro_qtable
-        self.epsilon = epsilon
-        self.epsilon_min = epsilon_min
-        self.epsilon_decay = epsilon_decay
-        self.alpha = alpha
+        # No modo teste não exploramos nem aprendemos; epsilon fica a 0.
+        if self.modo == "teste":
+            self.epsilon = 0.0
+            self.epsilon_min = 0.0
+            self.epsilon_decay = 1.0
+            self.alpha = 0.0
+        else:
+            self.epsilon = epsilon
+            self.epsilon_min = epsilon_min
+            self.epsilon_decay = epsilon_decay
+            self.alpha = alpha
         self.gamma = gamma
         self.accoes = ["N", "S", "E", "O", "F"]
         self._carregar_politica()
@@ -113,7 +120,7 @@ class AgenteFarol(Agente):
                     self.q_table[(estado, accao)] = valor
 
     def guardar_politica(self):
-        if not self.ficheiro_qtable:
+        if not self.ficheiro_qtable or self.modo == "teste":
             return
         serializado = {}
         for (estado, accao), valor in self.q_table.items():

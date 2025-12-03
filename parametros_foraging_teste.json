@@ -1,8 +1,8 @@
 {
-  "max_passos": 50,
   "episodios": 5,
+  "max_passos": 50,
   "gamma_desconto": 0.9,
-  "ficheiro_metricas": "metricas_foraging_q_learning.json",
+  "ficheiro_metricas": "metricas_foraging_politica_fixa.json",
   "ambiente": {
     "tipo": "foraging",
     "largura": 8,

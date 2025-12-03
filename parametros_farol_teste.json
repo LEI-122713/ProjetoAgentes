@@ -1,0 +1,31 @@
+{
+  "episodios": 5,
+  "max_passos": 30,
+  "gamma_desconto": 0.9,
+  "ficheiro_metricas": "metricas_farol_politica_fixa.json",
+  "render": true,
+  "render_sleep": 0.0,
+  "ambiente": {
+    "tipo": "farol",
+    "largura": 7,
+    "altura": 7,
+    "farol": [6, 6],
+    "obstaculos": [[3, 3], [3, 4], [2, 5]]
+  },
+  "agentes": [
+    {
+      "nome": "A1",
+      "tipo": "farol",
+      "posicao_inicial": [0, 0],
+      "modo": "teste",
+      "q_table": "q_farol_A1.json"
+    },
+    {
+      "nome": "A2",
+      "tipo": "farol",
+      "posicao_inicial": [0, 1],
+      "modo": "teste",
+      "q_table": "q_farol_A2.json"
+    }
+  ]
+}
