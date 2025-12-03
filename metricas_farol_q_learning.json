@@ -1,0 +1,72 @@
+[
+  {
+    "episodio": 1,
+    "recompensa_total": 4.05,
+    "recompensa_descontada": 4.05,
+    "passos": 30,
+    "sucesso": false
+  },
+  {
+    "episodio": 2,
+    "recompensa_total": 4.3999999999999995,
+    "recompensa_descontada": 4.3999999999999995,
+    "passos": 16,
+    "sucesso": true
+  },
+  {
+    "episodio": 3,
+    "recompensa_total": 0.5999999999999994,
+    "recompensa_descontada": 0.5999999999999994,
+    "passos": 17,
+    "sucesso": true
+  },
+  {
+    "episodio": 4,
+    "recompensa_total": 2.4000000000000004,
+    "recompensa_descontada": 2.4000000000000004,
+    "passos": 30,
+    "sucesso": false
+  },
+  {
+    "episodio": 5,
+    "recompensa_total": 2.9499999999999997,
+    "recompensa_descontada": 2.9499999999999997,
+    "passos": 21,
+    "sucesso": true
+  },
+  {
+    "episodio": 6,
+    "recompensa_total": 0.5999999999999992,
+    "recompensa_descontada": 0.5999999999999992,
+    "passos": 17,
+    "sucesso": true
+  },
+  {
+    "episodio": 7,
+    "recompensa_total": 4.1499999999999995,
+    "recompensa_descontada": 4.1499999999999995,
+    "passos": 16,
+    "sucesso": true
+  },
+  {
+    "episodio": 8,
+    "recompensa_total": 10.700000000000001,
+    "recompensa_descontada": 10.700000000000001,
+    "passos": 30,
+    "sucesso": false
+  },
+  {
+    "episodio": 9,
+    "recompensa_total": 13.349999999999994,
+    "recompensa_descontada": 13.349999999999994,
+    "passos": 30,
+    "sucesso": false
+  },
+  {
+    "episodio": 10,
+    "recompensa_total": 7.3500000000000005,
+    "recompensa_descontada": 7.3500000000000005,
+    "passos": 18,
+    "sucesso": true
+  }
+]
