@@ -1,37 +1,72 @@
 [
   {
     "episodio": 1,
-    "recompensa_total": 1.6999999999999988,
-    "recompensa_descontada": -0.4627997717899706,
-    "passos": 29,
-    "sucesso": true
+    "recompensa_total": -11.249999999999984,
+    "recompensa_descontada": -1.262337192490733,
+    "passos": 100,
+    "sucesso": false
   },
   {
     "episodio": 2,
-    "recompensa_total": 1.6999999999999988,
-    "recompensa_descontada": -0.4627997717899706,
-    "passos": 29,
-    "sucesso": true
+    "recompensa_total": -4.95,
+    "recompensa_descontada": 0.057459288807270005,
+    "passos": 100,
+    "sucesso": false
   },
   {
     "episodio": 3,
-    "recompensa_total": 1.6999999999999988,
-    "recompensa_descontada": -0.4627997717899706,
-    "passos": 29,
+    "recompensa_total": 3.8999999999999995,
+    "recompensa_descontada": -0.051021164032324005,
+    "passos": 85,
     "sucesso": true
   },
   {
     "episodio": 4,
-    "recompensa_total": 1.6999999999999988,
-    "recompensa_descontada": -0.4627997717899706,
+    "recompensa_total": 9.900000000000002,
+    "recompensa_descontada": 1.3623399483443768,
     "passos": 29,
     "sucesso": true
   },
   {
     "episodio": 5,
-    "recompensa_total": 1.6999999999999988,
-    "recompensa_descontada": -0.4627997717899706,
+    "recompensa_total": 9.850000000000001,
+    "recompensa_descontada": 1.2055835243934157,
     "passos": 29,
+    "sucesso": true
+  },
+  {
+    "episodio": 6,
+    "recompensa_total": 10.100000000000001,
+    "recompensa_descontada": 1.3812452042427381,
+    "passos": 29,
+    "sucesso": true
+  },
+  {
+    "episodio": 7,
+    "recompensa_total": 9.75,
+    "recompensa_descontada": 1.2467375044610105,
+    "passos": 29,
+    "sucesso": true
+  },
+  {
+    "episodio": 8,
+    "recompensa_total": 8.750000000000002,
+    "recompensa_descontada": 0.8182233039345608,
+    "passos": 36,
+    "sucesso": true
+  },
+  {
+    "episodio": 9,
+    "recompensa_total": 11.700000000000003,
+    "recompensa_descontada": 1.1924920464926323,
+    "passos": 43,
+    "sucesso": true
+  },
+  {
+    "episodio": 10,
+    "recompensa_total": 10.0,
+    "recompensa_descontada": 1.336734488053761,
+    "passos": 31,
     "sucesso": true
   }
 ]

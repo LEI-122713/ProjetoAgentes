@@ -1,3 +1,4 @@
+# Interface base de ambiente (fornece observacoes e aplica acoes)
 class Ambiente:
     def __init__(self):
         # Dicionário para guardar a posição de cada agente no ambiente

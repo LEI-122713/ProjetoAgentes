@@ -1,3 +1,4 @@
+# Base para sensores que extraem partes do estado do ambiente para o agente
 class Sensor:
     """
     Sensor base. Ambientes concretos podem definir sensores que devolvem

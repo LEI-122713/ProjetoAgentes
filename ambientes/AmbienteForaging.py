@@ -3,7 +3,7 @@ from core.Observacao import Observacao
 from core.Accao import Accao
 
 
-def _manhattan(p1, p2):
+def _dist_manhattan(p1, p2):
     return abs(p1[0] - p2[0]) + abs(p1[1] - p2[1])
 
 
@@ -79,9 +79,14 @@ class AmbienteForaging(Ambiente):
     def _todos_recursos_recolhidos(self):
         return len(self.recursos) == 0 and all(v == 0 for v in self.agentes_carry.values())
 
+    def _alvo_mais_proximo(self, pos, alvos):
+        if not alvos:
+            return None
+        return min(alvos, key=lambda a: _dist_manhattan(pos, a))
+
     def agir(self, accao: Accao, agente):
         x, y = self.posicoes_agentes[agente]
-        recompensa = -0.1  # custo por passo
+        recompensa = -0.05  # custo por passo mais leve
 
         if accao.tipo in ["N", "S", "E", "O"]:
             destino = None
@@ -114,11 +119,27 @@ class AmbienteForaging(Ambiente):
             else:
                 recompensa -= 0.2
 
+        # Shaping: bonus se aproximou do alvo (recurso se vazio, ninho se a carregar)
+        alvo = None
+        if self.agentes_carry.get(agente, 0) > 0:
+            alvo = self._alvo_mais_proximo((x, y), self.ninhos)
+        else:
+            alvo = self._alvo_mais_proximo((x, y), self.recursos)
+        if accao.tipo in ["N", "S", "E", "O"] and alvo:
+            dist_antes = _dist_manhattan((x, y), alvo)
+            dist_depois = _dist_manhattan(self.posicoes_agentes[agente], alvo)
+            if dist_depois < dist_antes:
+                recompensa += 0.05
+            elif dist_depois > dist_antes:
+                recompensa -= 0.05
+
         # "F" fica; se nao ha recursos e o agente esta vazio, nao penaliza esperar
         if accao.tipo == "F" and len(self.recursos) == 0 and self.agentes_carry.get(agente, 0) == 0:
             recompensa = 0.0
 
+        # Bonus final quando tudo foi recolhido e depositado
         if self._todos_recursos_recolhidos():
+            recompensa += 3.0
             self._terminou = True
 
         return {"recompensa": recompensa, "terminou": self._terminou}
@@ -153,11 +174,8 @@ class AmbienteForaging(Ambiente):
         for agente, (ax, ay) in self.posicoes_agentes.items():
             char = agente.nome[0].upper() if agente.nome else "A"
             chave = (ax, ay)
-            if chave in ocupados:
-                grelha[ay][ax] = "*"
-            else:
-                grelha[ay][ax] = char
-                ocupados[chave] = True
+            grelha[ay][ax] = "*" if chave in ocupados else char
+            ocupados[chave] = True
 
         print("\n".join(" ".join(linha) for linha in grelha))
         print("---")

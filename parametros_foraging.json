@@ -1,6 +1,6 @@
 {
-  "max_passos": 50,
-  "episodios": 5,
+  "max_passos": 100,
+  "episodios": 10,
   "gamma_desconto": 0.9,
   "ficheiro_metricas": "metricas_foraging_q_learning.json",
   "render": false,

@@ -1,3 +1,4 @@
+# Interface base de agente (observa, decide accao, opcionalmente aprende)
 class Agente:
     def __init__(self, nome: str):
         self.nome = nome

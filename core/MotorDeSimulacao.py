@@ -3,6 +3,7 @@ import time
 from core.AgenteThread import AgenteThread
 
 
+# Motor principal que carrega parametros, cria ambiente/agentes, corre episodios (observa-age-avalia), regista metricas e fecha threads
 class MotorDeSimulacao:
     def __init__(self, ficheiro_parametros: str | None = None, parametros: dict | None = None):
         self.agentes = []

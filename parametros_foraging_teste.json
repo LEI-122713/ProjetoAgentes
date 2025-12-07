@@ -1,6 +1,6 @@
 {
-  "episodios": 5,
-  "max_passos": 50,
+  "episodios": 10,
+  "max_passos": 100,
   "gamma_desconto": 0.9,
   "ficheiro_metricas": "metricas_foraging_politica_fixa.json",
   "render": false,
