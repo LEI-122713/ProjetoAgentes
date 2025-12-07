@@ -1,8 +1,8 @@
 {
-  "max_passos": 50,
   "episodios": 5,
+  "max_passos": 50,
   "gamma_desconto": 0.9,
-  "ficheiro_metricas": "metricas_foraging_q_learning.json",
+  "ficheiro_metricas": "metricas_foraging_fixo.json",
   "render": false,
   "render_window": false,
   "render_sleep": 0.0,
@@ -24,25 +24,13 @@
       "nome": "F1",
       "tipo": "foraging",
       "posicao_inicial": [0, 1],
-      "modo": "aprendizagem",
-      "q_table": "q_foraging_F1.json",
-      "epsilon": 0.3,
-      "alpha": 0.5,
-      "gamma": 0.9,
-      "epsilon_min": 0.05,
-      "epsilon_decay": 0.99
+      "modo": "fixo"
     },
     {
       "nome": "F2",
       "tipo": "foraging",
       "posicao_inicial": [1, 0],
-      "modo": "aprendizagem",
-      "q_table": "q_foraging_F2.json",
-      "epsilon": 0.3,
-      "alpha": 0.5,
-      "gamma": 0.9,
-      "epsilon_min": 0.05,
-      "epsilon_decay": 0.99
+      "modo": "fixo"
     }
   ]
 }

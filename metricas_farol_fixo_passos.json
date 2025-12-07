@@ -1,0 +1,1322 @@
+[
+  {
+    "episodio": 1,
+    "passo": 1,
+    "agente": "A1",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      1
+    ]
+  },
+  {
+    "episodio": 1,
+    "passo": 1,
+    "agente": "A2",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      2
+    ]
+  },
+  {
+    "episodio": 1,
+    "passo": 2,
+    "agente": "A1",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      2
+    ]
+  },
+  {
+    "episodio": 1,
+    "passo": 2,
+    "agente": "A2",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      3
+    ]
+  },
+  {
+    "episodio": 1,
+    "passo": 3,
+    "agente": "A1",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      3
+    ]
+  },
+  {
+    "episodio": 1,
+    "passo": 3,
+    "agente": "A2",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      4
+    ]
+  },
+  {
+    "episodio": 1,
+    "passo": 4,
+    "agente": "A1",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      4
+    ]
+  },
+  {
+    "episodio": 1,
+    "passo": 4,
+    "agente": "A2",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      5
+    ]
+  },
+  {
+    "episodio": 1,
+    "passo": 5,
+    "agente": "A1",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      5
+    ]
+  },
+  {
+    "episodio": 1,
+    "passo": 5,
+    "agente": "A2",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      6
+    ]
+  },
+  {
+    "episodio": 1,
+    "passo": 6,
+    "agente": "A1",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      6
+    ]
+  },
+  {
+    "episodio": 1,
+    "passo": 6,
+    "agente": "A2",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      1,
+      6
+    ]
+  },
+  {
+    "episodio": 1,
+    "passo": 7,
+    "agente": "A1",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      1,
+      6
+    ]
+  },
+  {
+    "episodio": 1,
+    "passo": 7,
+    "agente": "A2",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      2,
+      6
+    ]
+  },
+  {
+    "episodio": 1,
+    "passo": 8,
+    "agente": "A1",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      2,
+      6
+    ]
+  },
+  {
+    "episodio": 1,
+    "passo": 8,
+    "agente": "A2",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      3,
+      6
+    ]
+  },
+  {
+    "episodio": 1,
+    "passo": 9,
+    "agente": "A1",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      3,
+      6
+    ]
+  },
+  {
+    "episodio": 1,
+    "passo": 9,
+    "agente": "A2",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      4,
+      6
+    ]
+  },
+  {
+    "episodio": 1,
+    "passo": 10,
+    "agente": "A1",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      4,
+      6
+    ]
+  },
+  {
+    "episodio": 1,
+    "passo": 10,
+    "agente": "A2",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      5,
+      6
+    ]
+  },
+  {
+    "episodio": 1,
+    "passo": 11,
+    "agente": "A1",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      5,
+      6
+    ]
+  },
+  {
+    "episodio": 1,
+    "passo": 11,
+    "agente": "A2",
+    "accao": "E",
+    "recompensa": 1.0,
+    "posicao": [
+      6,
+      6
+    ]
+  },
+  {
+    "episodio": 1,
+    "passo": 12,
+    "agente": "A1",
+    "accao": "E",
+    "recompensa": 1.0,
+    "posicao": [
+      6,
+      6
+    ]
+  },
+  {
+    "episodio": 1,
+    "passo": 12,
+    "agente": "A2",
+    "accao": "F",
+    "recompensa": 1.0,
+    "posicao": [
+      6,
+      6
+    ]
+  },
+  {
+    "episodio": 2,
+    "passo": 1,
+    "agente": "A1",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      1
+    ]
+  },
+  {
+    "episodio": 2,
+    "passo": 1,
+    "agente": "A2",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      2
+    ]
+  },
+  {
+    "episodio": 2,
+    "passo": 2,
+    "agente": "A1",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      2
+    ]
+  },
+  {
+    "episodio": 2,
+    "passo": 2,
+    "agente": "A2",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      3
+    ]
+  },
+  {
+    "episodio": 2,
+    "passo": 3,
+    "agente": "A1",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      3
+    ]
+  },
+  {
+    "episodio": 2,
+    "passo": 3,
+    "agente": "A2",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      4
+    ]
+  },
+  {
+    "episodio": 2,
+    "passo": 4,
+    "agente": "A1",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      4
+    ]
+  },
+  {
+    "episodio": 2,
+    "passo": 4,
+    "agente": "A2",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      5
+    ]
+  },
+  {
+    "episodio": 2,
+    "passo": 5,
+    "agente": "A1",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      5
+    ]
+  },
+  {
+    "episodio": 2,
+    "passo": 5,
+    "agente": "A2",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      6
+    ]
+  },
+  {
+    "episodio": 2,
+    "passo": 6,
+    "agente": "A1",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      6
+    ]
+  },
+  {
+    "episodio": 2,
+    "passo": 6,
+    "agente": "A2",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      1,
+      6
+    ]
+  },
+  {
+    "episodio": 2,
+    "passo": 7,
+    "agente": "A1",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      1,
+      6
+    ]
+  },
+  {
+    "episodio": 2,
+    "passo": 7,
+    "agente": "A2",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      2,
+      6
+    ]
+  },
+  {
+    "episodio": 2,
+    "passo": 8,
+    "agente": "A1",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      2,
+      6
+    ]
+  },
+  {
+    "episodio": 2,
+    "passo": 8,
+    "agente": "A2",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      3,
+      6
+    ]
+  },
+  {
+    "episodio": 2,
+    "passo": 9,
+    "agente": "A1",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      3,
+      6
+    ]
+  },
+  {
+    "episodio": 2,
+    "passo": 9,
+    "agente": "A2",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      4,
+      6
+    ]
+  },
+  {
+    "episodio": 2,
+    "passo": 10,
+    "agente": "A1",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      4,
+      6
+    ]
+  },
+  {
+    "episodio": 2,
+    "passo": 10,
+    "agente": "A2",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      5,
+      6
+    ]
+  },
+  {
+    "episodio": 2,
+    "passo": 11,
+    "agente": "A1",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      5,
+      6
+    ]
+  },
+  {
+    "episodio": 2,
+    "passo": 11,
+    "agente": "A2",
+    "accao": "E",
+    "recompensa": 1.0,
+    "posicao": [
+      6,
+      6
+    ]
+  },
+  {
+    "episodio": 2,
+    "passo": 12,
+    "agente": "A1",
+    "accao": "E",
+    "recompensa": 1.0,
+    "posicao": [
+      6,
+      6
+    ]
+  },
+  {
+    "episodio": 2,
+    "passo": 12,
+    "agente": "A2",
+    "accao": "F",
+    "recompensa": 1.0,
+    "posicao": [
+      6,
+      6
+    ]
+  },
+  {
+    "episodio": 3,
+    "passo": 1,
+    "agente": "A1",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      1
+    ]
+  },
+  {
+    "episodio": 3,
+    "passo": 1,
+    "agente": "A2",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      2
+    ]
+  },
+  {
+    "episodio": 3,
+    "passo": 2,
+    "agente": "A1",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      2
+    ]
+  },
+  {
+    "episodio": 3,
+    "passo": 2,
+    "agente": "A2",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      3
+    ]
+  },
+  {
+    "episodio": 3,
+    "passo": 3,
+    "agente": "A1",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      3
+    ]
+  },
+  {
+    "episodio": 3,
+    "passo": 3,
+    "agente": "A2",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      4
+    ]
+  },
+  {
+    "episodio": 3,
+    "passo": 4,
+    "agente": "A1",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      4
+    ]
+  },
+  {
+    "episodio": 3,
+    "passo": 4,
+    "agente": "A2",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      5
+    ]
+  },
+  {
+    "episodio": 3,
+    "passo": 5,
+    "agente": "A1",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      5
+    ]
+  },
+  {
+    "episodio": 3,
+    "passo": 5,
+    "agente": "A2",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      6
+    ]
+  },
+  {
+    "episodio": 3,
+    "passo": 6,
+    "agente": "A1",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      6
+    ]
+  },
+  {
+    "episodio": 3,
+    "passo": 6,
+    "agente": "A2",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      1,
+      6
+    ]
+  },
+  {
+    "episodio": 3,
+    "passo": 7,
+    "agente": "A1",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      1,
+      6
+    ]
+  },
+  {
+    "episodio": 3,
+    "passo": 7,
+    "agente": "A2",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      2,
+      6
+    ]
+  },
+  {
+    "episodio": 3,
+    "passo": 8,
+    "agente": "A1",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      2,
+      6
+    ]
+  },
+  {
+    "episodio": 3,
+    "passo": 8,
+    "agente": "A2",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      3,
+      6
+    ]
+  },
+  {
+    "episodio": 3,
+    "passo": 9,
+    "agente": "A1",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      3,
+      6
+    ]
+  },
+  {
+    "episodio": 3,
+    "passo": 9,
+    "agente": "A2",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      4,
+      6
+    ]
+  },
+  {
+    "episodio": 3,
+    "passo": 10,
+    "agente": "A1",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      4,
+      6
+    ]
+  },
+  {
+    "episodio": 3,
+    "passo": 10,
+    "agente": "A2",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      5,
+      6
+    ]
+  },
+  {
+    "episodio": 3,
+    "passo": 11,
+    "agente": "A1",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      5,
+      6
+    ]
+  },
+  {
+    "episodio": 3,
+    "passo": 11,
+    "agente": "A2",
+    "accao": "E",
+    "recompensa": 1.0,
+    "posicao": [
+      6,
+      6
+    ]
+  },
+  {
+    "episodio": 3,
+    "passo": 12,
+    "agente": "A1",
+    "accao": "E",
+    "recompensa": 1.0,
+    "posicao": [
+      6,
+      6
+    ]
+  },
+  {
+    "episodio": 3,
+    "passo": 12,
+    "agente": "A2",
+    "accao": "F",
+    "recompensa": 1.0,
+    "posicao": [
+      6,
+      6
+    ]
+  },
+  {
+    "episodio": 4,
+    "passo": 1,
+    "agente": "A1",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      1
+    ]
+  },
+  {
+    "episodio": 4,
+    "passo": 1,
+    "agente": "A2",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      2
+    ]
+  },
+  {
+    "episodio": 4,
+    "passo": 2,
+    "agente": "A1",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      2
+    ]
+  },
+  {
+    "episodio": 4,
+    "passo": 2,
+    "agente": "A2",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      3
+    ]
+  },
+  {
+    "episodio": 4,
+    "passo": 3,
+    "agente": "A1",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      3
+    ]
+  },
+  {
+    "episodio": 4,
+    "passo": 3,
+    "agente": "A2",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      4
+    ]
+  },
+  {
+    "episodio": 4,
+    "passo": 4,
+    "agente": "A1",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      4
+    ]
+  },
+  {
+    "episodio": 4,
+    "passo": 4,
+    "agente": "A2",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      5
+    ]
+  },
+  {
+    "episodio": 4,
+    "passo": 5,
+    "agente": "A1",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      5
+    ]
+  },
+  {
+    "episodio": 4,
+    "passo": 5,
+    "agente": "A2",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      6
+    ]
+  },
+  {
+    "episodio": 4,
+    "passo": 6,
+    "agente": "A1",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      6
+    ]
+  },
+  {
+    "episodio": 4,
+    "passo": 6,
+    "agente": "A2",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      1,
+      6
+    ]
+  },
+  {
+    "episodio": 4,
+    "passo": 7,
+    "agente": "A1",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      1,
+      6
+    ]
+  },
+  {
+    "episodio": 4,
+    "passo": 7,
+    "agente": "A2",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      2,
+      6
+    ]
+  },
+  {
+    "episodio": 4,
+    "passo": 8,
+    "agente": "A1",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      2,
+      6
+    ]
+  },
+  {
+    "episodio": 4,
+    "passo": 8,
+    "agente": "A2",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      3,
+      6
+    ]
+  },
+  {
+    "episodio": 4,
+    "passo": 9,
+    "agente": "A1",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      3,
+      6
+    ]
+  },
+  {
+    "episodio": 4,
+    "passo": 9,
+    "agente": "A2",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      4,
+      6
+    ]
+  },
+  {
+    "episodio": 4,
+    "passo": 10,
+    "agente": "A1",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      4,
+      6
+    ]
+  },
+  {
+    "episodio": 4,
+    "passo": 10,
+    "agente": "A2",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      5,
+      6
+    ]
+  },
+  {
+    "episodio": 4,
+    "passo": 11,
+    "agente": "A1",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      5,
+      6
+    ]
+  },
+  {
+    "episodio": 4,
+    "passo": 11,
+    "agente": "A2",
+    "accao": "E",
+    "recompensa": 1.0,
+    "posicao": [
+      6,
+      6
+    ]
+  },
+  {
+    "episodio": 4,
+    "passo": 12,
+    "agente": "A1",
+    "accao": "E",
+    "recompensa": 1.0,
+    "posicao": [
+      6,
+      6
+    ]
+  },
+  {
+    "episodio": 4,
+    "passo": 12,
+    "agente": "A2",
+    "accao": "F",
+    "recompensa": 1.0,
+    "posicao": [
+      6,
+      6
+    ]
+  },
+  {
+    "episodio": 5,
+    "passo": 1,
+    "agente": "A1",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      1
+    ]
+  },
+  {
+    "episodio": 5,
+    "passo": 1,
+    "agente": "A2",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      2
+    ]
+  },
+  {
+    "episodio": 5,
+    "passo": 2,
+    "agente": "A1",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      2
+    ]
+  },
+  {
+    "episodio": 5,
+    "passo": 2,
+    "agente": "A2",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      3
+    ]
+  },
+  {
+    "episodio": 5,
+    "passo": 3,
+    "agente": "A1",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      3
+    ]
+  },
+  {
+    "episodio": 5,
+    "passo": 3,
+    "agente": "A2",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      4
+    ]
+  },
+  {
+    "episodio": 5,
+    "passo": 4,
+    "agente": "A1",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      4
+    ]
+  },
+  {
+    "episodio": 5,
+    "passo": 4,
+    "agente": "A2",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      5
+    ]
+  },
+  {
+    "episodio": 5,
+    "passo": 5,
+    "agente": "A1",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      5
+    ]
+  },
+  {
+    "episodio": 5,
+    "passo": 5,
+    "agente": "A2",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      6
+    ]
+  },
+  {
+    "episodio": 5,
+    "passo": 6,
+    "agente": "A1",
+    "accao": "S",
+    "recompensa": -0.05,
+    "posicao": [
+      0,
+      6
+    ]
+  },
+  {
+    "episodio": 5,
+    "passo": 6,
+    "agente": "A2",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      1,
+      6
+    ]
+  },
+  {
+    "episodio": 5,
+    "passo": 7,
+    "agente": "A1",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      1,
+      6
+    ]
+  },
+  {
+    "episodio": 5,
+    "passo": 7,
+    "agente": "A2",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      2,
+      6
+    ]
+  },
+  {
+    "episodio": 5,
+    "passo": 8,
+    "agente": "A1",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      2,
+      6
+    ]
+  },
+  {
+    "episodio": 5,
+    "passo": 8,
+    "agente": "A2",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      3,
+      6
+    ]
+  },
+  {
+    "episodio": 5,
+    "passo": 9,
+    "agente": "A1",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      3,
+      6
+    ]
+  },
+  {
+    "episodio": 5,
+    "passo": 9,
+    "agente": "A2",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      4,
+      6
+    ]
+  },
+  {
+    "episodio": 5,
+    "passo": 10,
+    "agente": "A1",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      4,
+      6
+    ]
+  },
+  {
+    "episodio": 5,
+    "passo": 10,
+    "agente": "A2",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      5,
+      6
+    ]
+  },
+  {
+    "episodio": 5,
+    "passo": 11,
+    "agente": "A1",
+    "accao": "E",
+    "recompensa": -0.05,
+    "posicao": [
+      5,
+      6
+    ]
+  },
+  {
+    "episodio": 5,
+    "passo": 11,
+    "agente": "A2",
+    "accao": "E",
+    "recompensa": 1.0,
+    "posicao": [
+      6,
+      6
+    ]
+  },
+  {
+    "episodio": 5,
+    "passo": 12,
+    "agente": "A1",
+    "accao": "E",
+    "recompensa": 1.0,
+    "posicao": [
+      6,
+      6
+    ]
+  },
+  {
+    "episodio": 5,
+    "passo": 12,
+    "agente": "A2",
+    "accao": "F",
+    "recompensa": 1.0,
+    "posicao": [
+      6,
+      6
+    ]
+  }
+]

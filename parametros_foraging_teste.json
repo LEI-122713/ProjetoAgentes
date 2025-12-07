@@ -3,6 +3,9 @@
   "max_passos": 50,
   "gamma_desconto": 0.9,
   "ficheiro_metricas": "metricas_foraging_politica_fixa.json",
+  "render": false,
+  "render_window": false,
+  "render_sleep": 0.0,
   "ambiente": {
     "tipo": "foraging",
     "largura": 8,
@@ -20,12 +23,16 @@
     {
       "nome": "F1",
       "tipo": "foraging",
-      "posicao_inicial": [0, 1]
+      "posicao_inicial": [0, 1],
+      "modo": "teste",
+      "q_table": "q_foraging_F1.json"
     },
     {
       "nome": "F2",
       "tipo": "foraging",
-      "posicao_inicial": [1, 0]
+      "posicao_inicial": [1, 0],
+      "modo": "teste",
+      "q_table": "q_foraging_F2.json"
     }
   ]
 }

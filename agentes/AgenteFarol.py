@@ -8,13 +8,13 @@ from core.Accao import Accao
 class AgenteFarol(Agente):
     def __init__(self, nome, modo="teste", ficheiro_qtable=None, epsilon=0.2, alpha=0.5, gamma=0.9, epsilon_min=0.05, epsilon_decay=0.99):
         super().__init__(nome)
-        self.modo = modo  # "aprendizagem" ou "teste"
+        self.modo = modo  # "aprendizagem", "teste" ou "fixo"
         self.q_table = {}
         self.ultimo_estado = None
         self.ultima_accao = None
         self.ficheiro_qtable = ficheiro_qtable
-        # No modo teste não exploramos nem aprendemos; epsilon fica a 0.
-        if self.modo == "teste":
+        # Nos modos teste/fixo não exploramos nem aprendemos; epsilon fica a 0.
+        if self.modo in ["teste", "fixo"]:
             self.epsilon = 0.0
             self.epsilon_min = 0.0
             self.epsilon_decay = 1.0
@@ -35,7 +35,7 @@ class AgenteFarol(Agente):
         sx = 1 if dx > 0 else -1 if dx < 0 else 0
         sy = 1 if dy > 0 else -1 if dy < 0 else 0
 
-        # frente é a direção que mais aproxima do farol
+        # frente Ç¸ a direÇõÇœo que mais aproxima do farol
         if abs(dx) > abs(dy):
             frente = "E" if dx > 0 else "O"
         else:
@@ -44,13 +44,30 @@ class AgenteFarol(Agente):
 
         return (sx, sy, frente_livre)
 
+    def _accao_fixa(self, estado, mov_validos):
+        dx_sign, dy_sign, frente_livre = estado
+        # Se já está alinhado ao farol, fica parado para não ser penalizado
+        if dx_sign == 0 and dy_sign == 0:
+            return "F"
+        if frente_livre:
+            if abs(dx_sign) > abs(dy_sign):
+                candidato = "E" if dx_sign > 0 else "O"
+            else:
+                candidato = "S" if dy_sign > 0 else "N"
+            if candidato in mov_validos:
+                return candidato
+        return mov_validos[0] if mov_validos else "F"
+
     def _escolher_accao(self, estado, mov_validos):
+        if self.modo == "fixo":
+            return self._accao_fixa(estado, mov_validos)
+
         if self.modo == "aprendizagem" and random.random() < self.epsilon:
-            # Exploração: escolhe uma ação válida aleatória (ou F)
+            # ExploraÇõÇœo: escolhe uma aÇõÇœo vÇ­lida aleatÇüria (ou F)
             candidatas = [a for a in self.accoes if (a in mov_validos) or a == "F"]
             return random.choice(candidatas) if candidatas else "F"
 
-        # Exploitação: escolhe melhor Q
+        # ExploitaÇõÇœo: escolhe melhor Q
         melhor_accao = None
         melhor_q = -float("inf")
         for a in self.accoes:
@@ -62,7 +79,7 @@ class AgenteFarol(Agente):
                 melhor_accao = a
 
         if melhor_accao is None:
-            # sem info, tenta válida ou fica
+            # sem info, tenta vÇ­lida ou fica
             return mov_validos[0] if mov_validos else "F"
         return melhor_accao
 
@@ -96,7 +113,7 @@ class AgenteFarol(Agente):
         novo_q = q_atual + self.alpha * (recompensa + self.gamma * max_q_prox - q_atual)
         self.q_table[chave] = novo_q
 
-        # Decaimento de exploração
+        # Decaimento de exploraÇõÇœo
         self.epsilon = max(self.epsilon_min, self.epsilon * self.epsilon_decay)
 
     def reset(self):
@@ -120,7 +137,7 @@ class AgenteFarol(Agente):
                     self.q_table[(estado, accao)] = valor
 
     def guardar_politica(self):
-        if not self.ficheiro_qtable or self.modo == "teste":
+        if not self.ficheiro_qtable or self.modo in ["teste", "fixo"]:
             return
         serializado = {}
         for (estado, accao), valor in self.q_table.items():

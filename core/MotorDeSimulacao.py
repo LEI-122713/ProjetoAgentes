@@ -1,10 +1,12 @@
 import json
 import time
+from core.AgenteThread import AgenteThread
 
 
 class MotorDeSimulacao:
     def __init__(self, ficheiro_parametros: str | None = None, parametros: dict | None = None):
         self.agentes = []
+        self.agente_threads = []
         self.ambiente = None
         self.passo_atual = 0
         self.max_passos = 10
@@ -12,20 +14,19 @@ class MotorDeSimulacao:
         self.parametros = parametros or {}
         self.recompensa_total = 0.0
         self.historico_passos = []
+        self.historico_passos_todos = []
         self.episodios = 1
         self.ficheiro_metricas = "metricas.json"
+        self.ficheiro_passos = "metricas_passos.json"
         self.logger = None
         self.render = False
+        self.render_window = False
         self.render_sleep = 0.0
         self.gamma_desconto = 1.0
+        self.visualizador = None
 
-    # --- método estático pedido no enunciado ---
     @staticmethod
     def cria(nome_do_ficheiro_parametros: str) -> "MotorDeSimulacao":
-        """
-        Cria e devolve uma instância de MotorDeSimulacao
-        a partir de um ficheiro de parâmetros JSON.
-        """
         with open(nome_do_ficheiro_parametros, "r", encoding="utf-8") as f:
             parametros = json.load(f)
 
@@ -37,16 +38,24 @@ class MotorDeSimulacao:
         motor.max_passos = parametros.get("max_passos", motor.max_passos)
         motor.episodios = parametros.get("episodios", motor.episodios)
         motor.ficheiro_metricas = parametros.get("ficheiro_metricas", motor.ficheiro_metricas)
+        motor.ficheiro_passos = parametros.get("ficheiro_passos", motor._derivar_ficheiro_passos())
         motor.render = parametros.get("render", motor.render)
+        motor.render_window = parametros.get("render_window", motor.render_window)
         motor.render_sleep = parametros.get("render_sleep", motor.render_sleep)
         motor.gamma_desconto = parametros.get("gamma_desconto", motor.gamma_desconto)
         motor._construir_ambiente(parametros.get("ambiente", {}))
         motor._construir_agentes(parametros.get("agentes", []))
         motor._construir_logger()
+        motor._construir_visualizador()
 
         return motor
 
-    # --- listaAgentes(): Agente[] ---
+    def _derivar_ficheiro_passos(self):
+        base = self.ficheiro_metricas
+        if base.endswith(".json"):
+            return base.replace(".json", "_passos.json")
+        return base + "_passos.json"
+
     def listaAgentes(self):
         return self.agentes
 
@@ -110,11 +119,23 @@ class MotorDeSimulacao:
             elif tipo == "foraging":
                 from agentes.AgenteForaging import AgenteForaging
 
-                agente = AgenteForaging(nome)
+                agente = AgenteForaging(
+                    nome,
+                    modo=cfg.get("modo", "teste"),
+                    ficheiro_qtable=cfg.get("q_table", None),
+                    epsilon=cfg.get("epsilon", 0.2),
+                    alpha=cfg.get("alpha", 0.5),
+                    gamma=cfg.get("gamma", 0.9),
+                    epsilon_min=cfg.get("epsilon_min", 0.05),
+                    epsilon_decay=cfg.get("epsilon_decay", 0.99),
+                )
             else:
                 raise ValueError(f"Tipo de agente desconhecido: {tipo}")
 
             self.agentes.append(agente)
+            thr = AgenteThread(agente)
+            thr.start()
+            self.agente_threads.append(thr)
 
             if self.ambiente and hasattr(self.ambiente, "adicionaAgente"):
                 self.ambiente.adicionaAgente(agente, posicao_inicial)
@@ -124,14 +145,19 @@ class MotorDeSimulacao:
 
         self.logger = Logger()
 
+    def _construir_visualizador(self):
+        if not self.render_window:
+            return
+        try:
+            from visualizacao import VisualizadorGrid
+        except ImportError:
+            print("Aviso: matplotlib nao disponivel; render_window desativado.")
+            self.render_window = False
+            return
+        if hasattr(self.ambiente, "grid_state"):
+            self.visualizador = VisualizadorGrid()
+
     def _extrair_resultado(self, resultado):
-        """
-        Aceita vários formatos de retorno do ambiente.agir:
-        - dict com chaves recompensa, terminou
-        - tuplo/lista (recompensa, terminou)
-        - número (só recompensa)
-        - None (sem recompensa)
-        """
         recompensa = 0.0
         terminou = False
 
@@ -147,14 +173,9 @@ class MotorDeSimulacao:
 
         return recompensa, terminou
 
-    # --- executa() ---
     def executa(self):
-        """
-        Loop principal com episódios: observa, delibera, age, regista métricas
-        e pára ao atingir condição de término ou max_passos.
-        """
         for ep in range(1, self.episodios + 1):
-            print(f"===== EPISÓDIO {ep} =====")
+            print(f"===== EPISODIO {ep} =====")
             self._reset_episodio()
             sucesso_ep = False
 
@@ -163,20 +184,19 @@ class MotorDeSimulacao:
                 terminou_episodio = False
                 print(f"--- PASSO {self.passo_atual} ---")
 
-                for agente in self.agentes:
+                for thr in self.agente_threads:
+                    agente = thr.agente
                     obs = self.ambiente.observacaoPara(agente)
-                    agente.observacao(obs)
-                    accao = agente.age()
+                    accao = thr.passo(obs)
 
                     resultado = self.ambiente.agir(accao, agente)
                     recompensa, terminou = self._extrair_resultado(resultado)
 
                     nova_obs = self.ambiente.observacaoPara(agente)
-                    agente.avaliacaoEstadoAtual(recompensa, nova_obs, terminou)
+                    thr.avaliar(recompensa, nova_obs, terminou)
 
                     pos = self.ambiente.posicoes_agentes.get(agente)
                     self.recompensa_total += recompensa
-                    # recompensa descontada simples: um fator por passo global
                     fator = self.gamma_desconto ** max(self.passo_atual - 1, 0)
                     self.recompensa_descontada_total += fator * recompensa
                     self.historico_passos.append({
@@ -188,28 +208,30 @@ class MotorDeSimulacao:
                         "posicao": pos,
                     })
 
-                    print(f"> {agente.nome} faz {accao.tipo}, recompensa {recompensa}, posição {pos}")
+                    print(f"> {agente.nome} faz {accao.tipo}, recompensa {recompensa}, posicao {pos}")
                     if terminou:
                         terminou_episodio = True
                         sucesso_ep = True
 
-                # Atualização global do ambiente
                 self.ambiente.atualizacao()
 
-                # Render opcional (grelha em texto)
                 if self.render and hasattr(self.ambiente, "render"):
                     self.ambiente.render()
                     if self.render_sleep > 0:
                         time.sleep(self.render_sleep)
+                if self.render_window and self.visualizador and hasattr(self.ambiente, "grid_state"):
+                    grelha = self.ambiente.grid_state()
+                    self.visualizador.mostra(grelha)
+                    if self.render_sleep > 0:
+                        time.sleep(self.render_sleep)
 
-                # Perguntar ao ambiente se há condição de término global
                 if hasattr(self.ambiente, "terminou") and callable(self.ambiente.terminou):
                     if self.ambiente.terminou():
                         terminou_episodio = True
                         sucesso_ep = True
 
                 if terminou_episodio:
-                    print("Condição de término atingida pelo ambiente/ação.")
+                    print("Condicao de termino atingida pelo ambiente/acao.")
                     break
 
             if self.logger:
@@ -220,17 +242,21 @@ class MotorDeSimulacao:
                     self.recompensa_descontada_total,
                     sucesso_ep,
                 )
+            # guarda historico do episodio antes de reset
+            self.historico_passos_todos.extend(self.historico_passos)
             self._guardar_politicas()
 
-            print(f"Recompensa total do episódio {ep}: {self.recompensa_total}")
-            print(f"Recompensa descontada do episódio {ep}: {self.recompensa_descontada_total}")
+            print(f"Recompensa total do episodio {ep}: {self.recompensa_total}")
+            print(f"Recompensa descontada do episodio {ep}: {self.recompensa_descontada_total}")
             print(f"Passos executados: {self.passo_atual}")
 
-            # preparar próximo episódio
             self._reset_agentes()
 
         if self.logger:
             self.logger.guardar(self.ficheiro_metricas)
+            if self.historico_passos_todos:
+                self.logger.guardar_passos(self.historico_passos_todos, self.ficheiro_passos)
+        self._parar_threads()
 
     def _reset_episodio(self):
         self.passo_atual = 0
@@ -244,6 +270,12 @@ class MotorDeSimulacao:
         for agente in self.agentes:
             if hasattr(agente, "reset"):
                 agente.reset()
+
+    def _parar_threads(self):
+        for thr in self.agente_threads:
+            thr.parar()
+        for thr in self.agente_threads:
+            thr.join(timeout=1.0)
 
     def _guardar_politicas(self):
         for agente in self.agentes:

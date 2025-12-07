@@ -126,3 +126,17 @@ class AmbienteFarol(Ambiente):
 
         print("\n".join(" ".join(linha) for linha in grelha))
         print("---")
+
+    def grid_state(self):
+        grelha = [["." for _ in range(self.largura)] for _ in range(self.altura)]
+        for (ox, oy) in self.obstaculos:
+            grelha[oy][ox] = "#"
+        fx, fy = self.pos_farol
+        grelha[fy][fx] = "F"
+        ocupados = {}
+        for agente, (ax, ay) in self.posicoes_agentes.items():
+            char = self._labels_agentes.get(agente, "A")
+            chave = (ax, ay)
+            grelha[ay][ax] = "*" if chave in ocupados else char
+            ocupados[chave] = True
+        return grelha

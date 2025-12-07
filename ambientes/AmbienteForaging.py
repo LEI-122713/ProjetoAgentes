@@ -3,10 +3,14 @@ from core.Observacao import Observacao
 from core.Accao import Accao
 
 
+def _manhattan(p1, p2):
+    return abs(p1[0] - p2[0]) + abs(p1[1] - p2[1])
+
+
 class AmbienteForaging(Ambiente):
     """
-    Grelha 2D com recursos, ninhos e obstáculos.
-    Ações: N, S, E, O, F (ficar), APANHAR, DEPOSITAR.
+    Grelha 2D com recursos, ninhos e obstaculos.
+    Acoes: N, S, E, O, F (ficar), APANHAR, DEPOSITAR.
     """
 
     def __init__(self, largura=7, altura=7, recursos=None, valores_recursos=None, ninhos=None, obstaculos=None):
@@ -92,14 +96,14 @@ class AmbienteForaging(Ambiente):
             if destino:
                 self.posicoes_agentes[agente] = destino
             else:
-                recompensa -= 0.2  # penalização por bater em obstáculo/borda
+                recompensa -= 0.2  # penalizacao por bater em obstaculo/borda
 
         elif accao.tipo == "APANHAR":
             if (x, y) in self.recursos and self.agentes_carry[agente] == 0:
                 self.recursos.remove((x, y))
                 valor = self.valores_recursos.get((x, y), 1.0)
                 self.agentes_carry[agente] = valor
-                recompensa += 0.5  # pequeno bónus por apanhar
+                recompensa += 0.5  # pequeno bonus por apanhar
             else:
                 recompensa -= 0.2
 
@@ -110,7 +114,9 @@ class AmbienteForaging(Ambiente):
             else:
                 recompensa -= 0.2
 
-        # "F" fica no sítio, só aplica custo do passo
+        # "F" fica; se nao ha recursos e o agente esta vazio, nao penaliza esperar
+        if accao.tipo == "F" and len(self.recursos) == 0 and self.agentes_carry.get(agente, 0) == 0:
+            recompensa = 0.0
 
         if self._todos_recursos_recolhidos():
             self._terminou = True
@@ -118,7 +124,6 @@ class AmbienteForaging(Ambiente):
         return {"recompensa": recompensa, "terminou": self._terminou}
 
     def atualizacao(self):
-        # Sem dinâmica extra por agora
         pass
 
     def terminou(self):
@@ -156,3 +161,19 @@ class AmbienteForaging(Ambiente):
 
         print("\n".join(" ".join(linha) for linha in grelha))
         print("---")
+
+    def grid_state(self):
+        grelha = [["." for _ in range(self.largura)] for _ in range(self.altura)]
+        for (ox, oy) in self.obstaculos:
+            grelha[oy][ox] = "#"
+        for (rx, ry) in self.recursos:
+            grelha[ry][rx] = "R"
+        for (nx, ny) in self.ninhos:
+            grelha[ny][nx] = "N"
+        ocupados = {}
+        for agente, (ax, ay) in self.posicoes_agentes.items():
+            char = agente.nome[0].upper() if agente.nome else "A"
+            chave = (ax, ay)
+            grelha[ay][ax] = "*" if chave in ocupados else char
+            ocupados[chave] = True
+        return grelha

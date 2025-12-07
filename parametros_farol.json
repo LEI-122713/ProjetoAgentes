@@ -3,6 +3,7 @@
   "max_passos": 30,
   "ficheiro_metricas": "metricas_farol_q_learning.json",
   "render": true,
+  "render_window": false,
   "render_sleep": 0.0,
   "ambiente": {
     "tipo": "farol",
