@@ -2,9 +2,9 @@
   "episodios": 10,
   "max_passos": 100,
   "gamma_desconto": 0.9,
-  "ficheiro_metricas": "metricas_foraging_politica_fixa.json",
+  "ficheiro_metricas": "metricas/foraging/metricas_foraging_politica_fixa.json",
   "render": false,
-  "render_window": false,
+  "render_window": true,
   "render_sleep": 0.0,
   "ambiente": {
     "tipo": "foraging",
@@ -21,14 +21,14 @@
   },
   "agentes": [
     {
-      "nome": "F1",
+      "nome": "A",
       "tipo": "foraging",
       "posicao_inicial": [0, 1],
       "modo": "teste",
       "q_table": "q_foraging_F1.json"
     },
     {
-      "nome": "F2",
+      "nome": "B",
       "tipo": "foraging",
       "posicao_inicial": [1, 0],
       "modo": "teste",

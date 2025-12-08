@@ -2,7 +2,7 @@
   "max_passos": 100,
   "episodios": 10,
   "gamma_desconto": 0.9,
-  "ficheiro_metricas": "metricas_foraging_q_learning.json",
+  "ficheiro_metricas": "metricas/foraging/metricas_foraging_q_learning.json",
   "render": false,
   "render_window": false,
   "render_sleep": 0.0,

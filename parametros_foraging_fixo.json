@@ -2,10 +2,10 @@
   "episodios": 1,
   "max_passos": 50,
   "gamma_desconto": 0.9,
-  "ficheiro_metricas": "metricas_foraging_fixo.json",
+  "ficheiro_metricas": "metricas/foraging/metricas_foraging_fixo.json",
   "render": false,
-  "render_window": false,
-  "render_sleep": 0.0,
+  "render_window": true,
+  "render_sleep": 0.5,
   "ambiente": {
     "tipo": "foraging",
     "largura": 8,

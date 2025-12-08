@@ -1,7 +1,7 @@
 {
   "episodios": 10,
   "max_passos": 30,
-  "ficheiro_metricas": "metricas_farol_q_learning.json",
+  "ficheiro_metricas": "metricas/farol/metricas_farol_q_learning.json",
   "render": true,
   "render_window": false,
   "render_sleep": 0.0,
@@ -23,7 +23,7 @@
       "alpha": 0.5,
       "gamma": 0.9,
       "epsilon_min": 0.05,
-      "epsilon_decay": 0.99
+      "epsilon_decay": 0.995
     },
     {
       "nome": "A2",
@@ -35,7 +35,7 @@
       "alpha": 0.5,
       "gamma": 0.9,
       "epsilon_min": 0.05,
-      "epsilon_decay": 0.99
+      "epsilon_decay": 0.995
     }
   ]
 }
