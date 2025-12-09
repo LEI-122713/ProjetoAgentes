@@ -1,5 +1,5 @@
 {
-  "episodios": 10,
+  "episodios": 100,
   "max_passos": 30,
   "ficheiro_metricas": "metricas/farol/metricas_farol_q_learning.json",
   "render": true,

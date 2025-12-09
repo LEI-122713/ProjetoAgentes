@@ -5,7 +5,7 @@
   "ficheiro_metricas": "metricas/foraging/metricas_foraging_fixo.json",
   "render": false,
   "render_window": true,
-  "render_sleep": 0.5,
+  "render_sleep": 0.0,
   "ambiente": {
     "tipo": "foraging",
     "largura": 8,
