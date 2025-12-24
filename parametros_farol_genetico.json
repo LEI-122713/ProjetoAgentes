@@ -1,0 +1,42 @@
+{
+  "episodios": 100,
+  "max_passos": 30,
+  "gamma_desconto": 0.9,
+  "ficheiro_metricas": "metricas/farol/metricas_farol_genetico.json",
+  "render": false,
+  "render_window": false,
+  "render_sleep": 0.0,
+  "ambiente": {
+    "tipo": "farol",
+    "largura": 7,
+    "altura": 7,
+    "farol": [6, 6],
+    "obstaculos": [[3, 3], [3, 4], [2, 5]]
+  },
+  "agentes": [
+    {
+      "nome": "G1",
+      "tipo": "farol",
+      "algoritmo": "genetico",
+      "modo": "aprendizagem",
+      "posicao_inicial": [0, 0],
+      "ficheiro_genoma": "genoma_farol_G1.json",
+      "populacao": 14,
+      "elitismo": 2,
+      "taxa_mutacao": 0.1,
+      "prob_cruzamento": 0.7
+    },
+    {
+      "nome": "G2",
+      "tipo": "farol",
+      "algoritmo": "genetico",
+      "modo": "aprendizagem",
+      "posicao_inicial": [0, 1],
+      "ficheiro_genoma": "genoma_farol_G2.json",
+      "populacao": 14,
+      "elitismo": 2,
+      "taxa_mutacao": 0.1,
+      "prob_cruzamento": 0.7
+    }
+  ]
+}

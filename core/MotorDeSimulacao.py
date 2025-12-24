@@ -101,22 +101,36 @@ class MotorDeSimulacao:
     def _construir_agentes(self, lista_cfg_agentes: list):
         for cfg in lista_cfg_agentes:
             tipo = cfg.get("tipo", "farol")
+            algoritmo = cfg.get("algoritmo", "q_learning")
             nome = cfg.get("nome", "agente")
             posicao_inicial = tuple(cfg.get("posicao_inicial", (0, 0)))
 
             if tipo == "farol":
-                from agentes.AgenteFarol import AgenteFarol
+                if algoritmo == "genetico":
+                    from agentes.AgenteFarolGenetico import AgenteFarolGenetico
 
-                agente = AgenteFarol(
-                    nome,
-                    modo=cfg.get("modo", "teste"),
-                    ficheiro_qtable=cfg.get("q_table", None),
-                    epsilon=cfg.get("epsilon", 0.2),
-                    alpha=cfg.get("alpha", 0.5),
-                    gamma=cfg.get("gamma", 0.9),
-                    epsilon_min=cfg.get("epsilon_min", 0.05),
-                    epsilon_decay=cfg.get("epsilon_decay", 0.99),
-                )
+                    agente = AgenteFarolGenetico(
+                        nome,
+                        modo=cfg.get("modo", "aprendizagem"),
+                        ficheiro_genoma=cfg.get("ficheiro_genoma", None),
+                        populacao=cfg.get("populacao", 12),
+                        elitismo=cfg.get("elitismo", 2),
+                        taxa_mutacao=cfg.get("taxa_mutacao", 0.1),
+                        prob_cruzamento=cfg.get("prob_cruzamento", 0.7),
+                    )
+                else:
+                    from agentes.AgenteFarol import AgenteFarol
+
+                    agente = AgenteFarol(
+                        nome,
+                        modo=cfg.get("modo", "teste"),
+                        ficheiro_qtable=cfg.get("q_table", None),
+                        epsilon=cfg.get("epsilon", 0.2),
+                        alpha=cfg.get("alpha", 0.5),
+                        gamma=cfg.get("gamma", 0.9),
+                        epsilon_min=cfg.get("epsilon_min", 0.05),
+                        epsilon_decay=cfg.get("epsilon_decay", 0.99),
+                    )
             elif tipo == "foraging":
                 from agentes.AgenteForaging import AgenteForaging
 
