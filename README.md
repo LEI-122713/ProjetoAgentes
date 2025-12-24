@@ -13,6 +13,7 @@ Troque o ficheiro de parâmetros para outro cenário, por exemplo:
 - Farol (algoritmo genético): `python3 main.py parametros_farol_genetico.json`
 - Farol (política fixa): `python3 main.py parametros_farol_fixo.json`
 - Foraging (aprendizagem): `python3 main.py parametros_foraging.json`
+- Foraging (algoritmo genético): `python3 main.py parametros_foraging_genetico.json`
 
 ### Comparar métricas (aprendizagem vs teste)
 Use o script `compare_metricas.py` passando dois ficheiros `.json` de métricas:

@@ -141,18 +141,40 @@ class MotorDeSimulacao:
                         epsilon_decay=cfg.get("epsilon_decay", 0.99),
                     )
             elif tipo == "foraging":
-                from agentes.AgenteForaging import AgenteForaging
+                if algoritmo == "genetico":
+                    from agentes.AgenteForagingGenetico import AgenteForagingGenetico
 
-                agente = AgenteForaging(
-                    nome,
-                    modo=cfg.get("modo", "teste"),
-                    ficheiro_qtable=cfg.get("q_table", None),
-                    epsilon=cfg.get("epsilon", 0.2),
-                    alpha=cfg.get("alpha", 0.5),
-                    gamma=cfg.get("gamma", 0.9),
-                    epsilon_min=cfg.get("epsilon_min", 0.05),
-                    epsilon_decay=cfg.get("epsilon_decay", 0.99),
-                )
+                    agente = AgenteForagingGenetico(
+                        nome,
+                        modo=cfg.get("modo", "aprendizagem"),
+                        ficheiro_genoma=cfg.get("ficheiro_genoma", None),
+                        populacao=cfg.get("populacao", 20),
+                        elitismo=cfg.get("elitismo", 4),
+                        taxa_mutacao=cfg.get("taxa_mutacao", 0.1),
+                        prob_cruzamento=cfg.get("prob_cruzamento", 0.8),
+                        episodios_por_individuo=cfg.get("episodios_por_individuo", 1),
+                        bonus_sucesso=cfg.get("bonus_sucesso", 10.0),
+                        penalizacao_passos=cfg.get("penalizacao_passos", 0.0),
+                        penalizacao_distancia=cfg.get("penalizacao_distancia", 0.0),
+                        bonus_melhoria_distancia=cfg.get("bonus_melhoria_distancia", 0.0),
+                        penalizacao_afastamento=cfg.get("penalizacao_afastamento", 0.0),
+                        tamanho_torneio=cfg.get("tamanho_torneio", 3),
+                        stall_max=cfg.get("stall_max", 2),
+                        heuristic_seeds=cfg.get("heuristic_seeds", 1),
+                    )
+                else:
+                    from agentes.AgenteForaging import AgenteForaging
+
+                    agente = AgenteForaging(
+                        nome,
+                        modo=cfg.get("modo", "teste"),
+                        ficheiro_qtable=cfg.get("q_table", None),
+                        epsilon=cfg.get("epsilon", 0.2),
+                        alpha=cfg.get("alpha", 0.5),
+                        gamma=cfg.get("gamma", 0.9),
+                        epsilon_min=cfg.get("epsilon_min", 0.05),
+                        epsilon_decay=cfg.get("epsilon_decay", 0.99),
+                    )
             else:
                 raise ValueError(f"Tipo de agente desconhecido: {tipo}")
 
