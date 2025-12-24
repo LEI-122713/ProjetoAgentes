@@ -20,6 +20,15 @@ class AgenteFarolGenetico(Agente):
         elitismo=2,
         taxa_mutacao=0.1,
         prob_cruzamento=0.7,
+        episodios_por_individuo=1,
+        bonus_sucesso=8.0,
+        penalizacao_passos=0.0,
+        penalizacao_distancia=0.1,
+        bonus_melhoria_distancia=0.5,
+        penalizacao_afastamento=0.2,
+        tamanho_torneio=3,
+        stall_max=2,
+        heuristic_seeds=1,
     ):
         super().__init__(nome)
         self.modo = modo  # "aprendizagem" ou "teste"
@@ -28,6 +37,15 @@ class AgenteFarolGenetico(Agente):
         self.elitismo = max(1, elitismo)
         self.taxa_mutacao = taxa_mutacao
         self.prob_cruzamento = prob_cruzamento
+        self.episodios_por_individuo = max(1, episodios_por_individuo)
+        self.bonus_sucesso = bonus_sucesso
+        self.penalizacao_passos = penalizacao_passos
+        self.penalizacao_distancia = penalizacao_distancia
+        self.bonus_melhoria_distancia = bonus_melhoria_distancia
+        self.penalizacao_afastamento = penalizacao_afastamento
+        self.tamanho_torneio = max(2, tamanho_torneio)
+        self.stall_max = max(1, stall_max)
+        self.heuristic_seeds = max(0, heuristic_seeds)
 
         self.possiveis_accoes = ["N", "S", "E", "O", "F"]
         self.estados_possiveis = [(sx, sy, frente) for sx in (-1, 0, 1) for sy in (-1, 0, 1) for frente in (False, True)]
@@ -40,14 +58,23 @@ class AgenteFarolGenetico(Agente):
         self.avaliados_na_geracao = 0
         self.recompensa_ep = 0.0
         self.episodio_ativo = False
+        self.passos_ep = 0
+        self.teve_sucesso = False
+        self.acumulado_fitness_individuo = 0.0
+        self.ep_avaliados_individuo = 0
+        self.distancia_anterior = None
+        self.ultima_distancia = 0
+        self.ultima_posicao = None
+        self.stall_count = 0
 
         self._inicializar_populacao()
 
     def _inicializar_populacao(self):
         genoma_inicial = self._carregar_genoma(self.ficheiro_genoma) if self.ficheiro_genoma else None
+        genoma_heuristico = self._genoma_heuristico()
 
         if self.modo == "teste":
-            genoma = genoma_inicial or self._novo_genoma()
+            genoma = genoma_inicial or genoma_heuristico or self._novo_genoma()
             self.populacao = [genoma]
             self.fitnesses = [0.0]
             self.melhor_genoma = dict(genoma)
@@ -56,6 +83,11 @@ class AgenteFarolGenetico(Agente):
 
         if genoma_inicial:
             self.populacao.append(genoma_inicial)
+        # semeia cromossomas heurísticos (ir sempre na direção do farol quando livre)
+        for _ in range(self.heuristic_seeds):
+            if genoma_heuristico:
+                self.populacao.append(dict(genoma_heuristico))
+
         while len(self.populacao) < self.populacao_tamanho:
             self.populacao.append(self._novo_genoma())
 
@@ -64,6 +96,53 @@ class AgenteFarolGenetico(Agente):
 
     def _novo_genoma(self):
         return {estado: random.choice(self.possiveis_accoes) for estado in self.estados_possiveis}
+
+    def _genoma_heuristico(self):
+        """
+        Heuristica simples: tenta mover na direcao do farol se a celula frente_livre o permitir; senao fica parado.
+        """
+        gen = {}
+        for (sx, sy, frente_livre) in self.estados_possiveis:
+            if sx == 0 and sy == 0:
+                gen[(sx, sy, frente_livre)] = "F"
+                continue
+            if frente_livre:
+                # prioridade ao eixo dominante
+                if abs(sx) >= abs(sy):
+                    gen[(sx, sy, frente_livre)] = "E" if sx > 0 else "O"
+                else:
+                    gen[(sx, sy, frente_livre)] = "S" if sy > 0 else "N"
+            else:
+                # se frente bloqueada, tenta outro eixo ou fica
+                if sx != 0:
+                    gen[(sx, sy, frente_livre)] = "S" if sy > 0 else "N" if sy < 0 else ("E" if sx > 0 else "O")
+                elif sy != 0:
+                    gen[(sx, sy, frente_livre)] = "E" if sx > 0 else "O"
+                else:
+                    gen[(sx, sy, frente_livre)] = "F"
+        return gen
+
+    def _acao_heuristica(self, estado, mov_validos):
+        sx, sy, frente_livre = estado
+        if sx == 0 and sy == 0:
+            return "F"
+        if frente_livre:
+            if abs(sx) >= abs(sy):
+                preferida = "E" if sx > 0 else "O"
+            else:
+                preferida = "S" if sy > 0 else "N"
+            if preferida in mov_validos:
+                return preferida
+        # fallback: tenta eixo alternativo
+        alternativas = []
+        if sx != 0:
+            alternativas.append("E" if sx > 0 else "O")
+        if sy != 0:
+            alternativas.append("S" if sy > 0 else "N")
+        for alt in alternativas:
+            if alt in mov_validos:
+                return alt
+        return mov_validos[0] if mov_validos else "F"
 
     def _carregar_genoma(self, caminho):
         if not caminho or not os.path.exists(caminho):
@@ -105,6 +184,11 @@ class AgenteFarolGenetico(Agente):
         accao = genoma.get(estado)
         if accao in ["N", "S", "E", "O"] and accao not in mov_validos:
             accao = None
+        if self.stall_count >= self.stall_max:
+            # heuristica de desbloqueio: tenta aproximar do farol
+            if mov_validos:
+                accao = self._acao_heuristica(estado, mov_validos)
+            self.stall_count = 0
         if accao is None:
             if mov_validos:
                 accao = random.choice(mov_validos)
@@ -121,6 +205,29 @@ class AgenteFarolGenetico(Agente):
     def avaliacaoEstadoAtual(self, recompensa: float, nova_observacao=None, terminou: bool = False):
         self.episodio_ativo = True
         self.recompensa_ep += recompensa
+        self.passos_ep += 1
+        if nova_observacao is not None:
+            pos = nova_observacao.dados.get("posicao")
+            if pos is not None:
+                if self.ultima_posicao == pos:
+                    self.stall_count += 1
+                else:
+                    self.stall_count = 0
+                self.ultima_posicao = pos
+        if nova_observacao is not None:
+            dx, dy = nova_observacao.dados.get("dir_farol", (0, 0))
+            self.ultima_distancia = abs(dx) + abs(dy)
+            if self.distancia_anterior is None:
+                self.distancia_anterior = self.ultima_distancia
+            else:
+                delta = self.distancia_anterior - self.ultima_distancia
+                if delta > 0 and self.bonus_melhoria_distancia > 0:
+                    self.recompensa_ep += self.bonus_melhoria_distancia * delta
+                if delta < 0 and self.penalizacao_afastamento > 0:
+                    self.recompensa_ep -= self.penalizacao_afastamento * abs(delta)
+                self.distancia_anterior = self.ultima_distancia
+        if terminou:
+            self.teve_sucesso = True
 
     def reset(self):
         super().reset()
@@ -131,20 +238,45 @@ class AgenteFarolGenetico(Agente):
             return
 
         fitness = self.recompensa_ep
-        self.fitnesses[self.indice_genoma_atual] = fitness
+        if self.teve_sucesso:
+            fitness += self.bonus_sucesso
+        if self.penalizacao_passos > 0:
+            fitness -= self.penalizacao_passos * self.passos_ep
+        if not self.teve_sucesso and self.penalizacao_distancia > 0:
+            fitness -= self.penalizacao_distancia * self.ultima_distancia
 
-        if fitness > self.melhor_fitness:
-            self.melhor_fitness = fitness
-            self.melhor_genoma = dict(self._genoma_atual())
+        self.acumulado_fitness_individuo += fitness
+        self.ep_avaliados_individuo += 1
 
-        self.avaliados_na_geracao += 1
+        if self.ep_avaliados_individuo >= self.episodios_por_individuo:
+            fitness_medio = self.acumulado_fitness_individuo / self.episodios_por_individuo
+            self.fitnesses[self.indice_genoma_atual] = fitness_medio
+
+            if fitness_medio > self.melhor_fitness:
+                self.melhor_fitness = fitness_medio
+                self.melhor_genoma = dict(self._genoma_atual())
+
+            self.avaliados_na_geracao += 1
+            # modo teste: não evolui, mantém sempre o melhor genoma carregado
+            if self.modo != "aprendizagem":
+                self.indice_genoma_atual = 0
+            else:
+                self._preparar_proximo_individuo()
+
+            # se terminámos avaliação de um indivíduo, reset contadores
+            self.acumulado_fitness_individuo = 0.0
+            self.ep_avaliados_individuo = 0
+
         self.recompensa_ep = 0.0
+        self.passos_ep = 0
+        self.teve_sucesso = False
         self.episodio_ativo = False
+        self.distancia_anterior = None
+        self.ultima_distancia = 0
+        self.ultima_posicao = None
+        self.stall_count = 0
 
-        if self.modo != "aprendizagem":
-            self.indice_genoma_atual = 0
-            return
-
+    def _preparar_proximo_individuo(self):
         self.indice_genoma_atual += 1
         if self.indice_genoma_atual >= len(self.populacao):
             self._evoluir()
@@ -172,10 +304,10 @@ class AgenteFarolGenetico(Agente):
         self.fitnesses = [0.0 for _ in self.populacao]
         self.avaliados_na_geracao = 0
 
-    def _selecionar(self, avaliados, tamanho_torneio=3):
+    def _selecionar(self, avaliados):
         if not avaliados:
             return self._novo_genoma()
-        candidatos = random.sample(avaliados, k=min(tamanho_torneio, len(avaliados)))
+        candidatos = random.sample(avaliados, k=min(self.tamanho_torneio, len(avaliados)))
         candidatos.sort(key=lambda par: par[1], reverse=True)
         return dict(candidatos[0][0])
 

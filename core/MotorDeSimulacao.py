@@ -117,6 +117,15 @@ class MotorDeSimulacao:
                         elitismo=cfg.get("elitismo", 2),
                         taxa_mutacao=cfg.get("taxa_mutacao", 0.1),
                         prob_cruzamento=cfg.get("prob_cruzamento", 0.7),
+                        episodios_por_individuo=cfg.get("episodios_por_individuo", 1),
+                        bonus_sucesso=cfg.get("bonus_sucesso", 2.0),
+                        penalizacao_passos=cfg.get("penalizacao_passos", 0.0),
+                        penalizacao_distancia=cfg.get("penalizacao_distancia", 0.0),
+                        bonus_melhoria_distancia=cfg.get("bonus_melhoria_distancia", 0.0),
+                        penalizacao_afastamento=cfg.get("penalizacao_afastamento", 0.0),
+                        tamanho_torneio=cfg.get("tamanho_torneio", 3),
+                        stall_max=cfg.get("stall_max", 2),
+                        heuristic_seeds=cfg.get("heuristic_seeds", 1),
                     )
                 else:
                     from agentes.AgenteFarol import AgenteFarol
