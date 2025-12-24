@@ -1,702 +1,1402 @@
 [
   {
     "episodio": 1,
-    "recompensa_total": 2.400000000000002,
-    "recompensa_descontada": 2.400000000000002,
-    "passos": 30,
+    "recompensa_total": 5.1000000000000005,
+    "recompensa_descontada": 5.1000000000000005,
+    "passos": 20,
     "sucesso": true
   },
   {
     "episodio": 2,
-    "recompensa_total": 4.600000000000001,
-    "recompensa_descontada": 4.600000000000001,
-    "passos": 24,
-    "sucesso": true
+    "recompensa_total": -2.1000000000000005,
+    "recompensa_descontada": -2.1000000000000005,
+    "passos": 30,
+    "sucesso": false
   },
   {
     "episodio": 3,
-    "recompensa_total": 2.7499999999999996,
-    "recompensa_descontada": 2.7499999999999996,
-    "passos": 17,
-    "sucesso": true
+    "recompensa_total": -2.0000000000000004,
+    "recompensa_descontada": -2.0000000000000004,
+    "passos": 30,
+    "sucesso": false
   },
   {
     "episodio": 4,
-    "recompensa_total": 13.15,
-    "recompensa_descontada": 13.15,
+    "recompensa_total": -2.400000000000001,
+    "recompensa_descontada": -2.400000000000001,
     "passos": 30,
     "sucesso": false
   },
   {
     "episodio": 5,
-    "recompensa_total": 2.1999999999999993,
-    "recompensa_descontada": 2.1999999999999993,
-    "passos": 16,
-    "sucesso": true
+    "recompensa_total": -2.3000000000000007,
+    "recompensa_descontada": -2.3000000000000007,
+    "passos": 30,
+    "sucesso": false
   },
   {
     "episodio": 6,
-    "recompensa_total": 13.499999999999998,
-    "recompensa_descontada": 13.499999999999998,
+    "recompensa_total": -2.800000000000001,
+    "recompensa_descontada": -2.800000000000001,
     "passos": 30,
     "sucesso": false
   },
   {
     "episodio": 7,
-    "recompensa_total": 12.699999999999998,
-    "recompensa_descontada": 12.699999999999998,
+    "recompensa_total": -2.800000000000001,
+    "recompensa_descontada": -2.800000000000001,
     "passos": 30,
     "sucesso": false
   },
   {
     "episodio": 8,
-    "recompensa_total": 12.849999999999998,
-    "recompensa_descontada": 12.849999999999998,
-    "passos": 30,
-    "sucesso": false
+    "recompensa_total": 1.55,
+    "recompensa_descontada": 1.55,
+    "passos": 23,
+    "sucesso": true
   },
   {
     "episodio": 9,
-    "recompensa_total": 16.249999999999996,
-    "recompensa_descontada": 16.249999999999996,
+    "recompensa_total": -3.0000000000000013,
+    "recompensa_descontada": -3.0000000000000013,
     "passos": 30,
     "sucesso": false
   },
   {
     "episodio": 10,
-    "recompensa_total": 15.999999999999998,
-    "recompensa_descontada": 15.999999999999998,
-    "passos": 30,
-    "sucesso": false
+    "recompensa_total": 2.75,
+    "recompensa_descontada": 2.75,
+    "passos": 13,
+    "sucesso": true
   },
   {
     "episodio": 11,
-    "recompensa_total": 6.35,
-    "recompensa_descontada": 6.35,
-    "passos": 21,
+    "recompensa_total": 4.1,
+    "recompensa_descontada": 4.1,
+    "passos": 28,
     "sucesso": true
   },
   {
     "episodio": 12,
-    "recompensa_total": 14.1,
-    "recompensa_descontada": 14.1,
-    "passos": 30,
-    "sucesso": false
+    "recompensa_total": 5.2,
+    "recompensa_descontada": 5.2,
+    "passos": 17,
+    "sucesso": true
   },
   {
     "episodio": 13,
-    "recompensa_total": -1.2499999999999991,
-    "recompensa_descontada": -1.2499999999999991,
-    "passos": 29,
+    "recompensa_total": 5.800000000000001,
+    "recompensa_descontada": 5.800000000000001,
+    "passos": 14,
     "sucesso": true
   },
   {
     "episodio": 14,
-    "recompensa_total": 4.849999999999998,
-    "recompensa_descontada": 4.849999999999998,
+    "recompensa_total": -2.400000000000001,
+    "recompensa_descontada": -2.400000000000001,
     "passos": 30,
     "sucesso": false
   },
   {
     "episodio": 15,
-    "recompensa_total": 11.899999999999999,
-    "recompensa_descontada": 11.899999999999999,
-    "passos": 30,
-    "sucesso": false
+    "recompensa_total": 1.45,
+    "recompensa_descontada": 1.45,
+    "passos": 27,
+    "sucesso": true
   },
   {
     "episodio": 16,
-    "recompensa_total": 13.000000000000004,
-    "recompensa_descontada": 13.000000000000004,
+    "recompensa_total": -2.1000000000000005,
+    "recompensa_descontada": -2.1000000000000005,
     "passos": 30,
     "sucesso": false
   },
   {
     "episodio": 17,
-    "recompensa_total": 13.250000000000004,
-    "recompensa_descontada": 13.250000000000004,
+    "recompensa_total": -2.3000000000000007,
+    "recompensa_descontada": -2.3000000000000007,
     "passos": 30,
     "sucesso": false
   },
   {
     "episodio": 18,
-    "recompensa_total": 15.550000000000004,
-    "recompensa_descontada": 15.550000000000004,
+    "recompensa_total": -2.1000000000000005,
+    "recompensa_descontada": -2.1000000000000005,
     "passos": 30,
     "sucesso": false
   },
   {
     "episodio": 19,
-    "recompensa_total": 14.400000000000004,
-    "recompensa_descontada": 14.400000000000004,
+    "recompensa_total": 0.6499999999999996,
+    "recompensa_descontada": 0.6499999999999996,
     "passos": 30,
-    "sucesso": false
+    "sucesso": true
   },
   {
     "episodio": 20,
-    "recompensa_total": 15.600000000000003,
-    "recompensa_descontada": 15.600000000000003,
+    "recompensa_total": -2.800000000000001,
+    "recompensa_descontada": -2.800000000000001,
     "passos": 30,
     "sucesso": false
   },
   {
     "episodio": 21,
-    "recompensa_total": 14.400000000000004,
-    "recompensa_descontada": 14.400000000000004,
-    "passos": 30,
-    "sucesso": false
-  },
-  {
-    "episodio": 22,
-    "recompensa_total": 13.549999999999997,
-    "recompensa_descontada": 13.549999999999997,
-    "passos": 25,
+    "recompensa_total": 5.2,
+    "recompensa_descontada": 5.2,
+    "passos": 18,
     "sucesso": true
   },
   {
-    "episodio": 23,
-    "recompensa_total": 14.650000000000006,
-    "recompensa_descontada": 14.650000000000006,
+    "episodio": 22,
+    "recompensa_total": -2.3000000000000007,
+    "recompensa_descontada": -2.3000000000000007,
     "passos": 30,
     "sucesso": false
+  },
+  {
+    "episodio": 23,
+    "recompensa_total": 2.35,
+    "recompensa_descontada": 2.35,
+    "passos": 16,
+    "sucesso": true
   },
   {
     "episodio": 24,
-    "recompensa_total": 15.449999999999996,
-    "recompensa_descontada": 15.449999999999996,
-    "passos": 30,
-    "sucesso": false
+    "recompensa_total": 4.5,
+    "recompensa_descontada": 4.5,
+    "passos": 24,
+    "sucesso": true
   },
   {
     "episodio": 25,
-    "recompensa_total": 11.75,
-    "recompensa_descontada": 11.75,
-    "passos": 23,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
     "sucesso": true
   },
   {
     "episodio": 26,
-    "recompensa_total": 9.65,
-    "recompensa_descontada": 9.65,
-    "passos": 30,
-    "sucesso": false
+    "recompensa_total": 5.300000000000001,
+    "recompensa_descontada": 5.300000000000001,
+    "passos": 18,
+    "sucesso": true
   },
   {
     "episodio": 27,
-    "recompensa_total": -6.15,
-    "recompensa_descontada": -6.15,
-    "passos": 30,
-    "sucesso": false
-  },
-  {
-    "episodio": 28,
-    "recompensa_total": -7.000000000000003,
-    "recompensa_descontada": -7.000000000000003,
-    "passos": 30,
-    "sucesso": false
-  },
-  {
-    "episodio": 29,
-    "recompensa_total": -8.450000000000005,
-    "recompensa_descontada": -8.450000000000005,
-    "passos": 30,
-    "sucesso": false
-  },
-  {
-    "episodio": 30,
-    "recompensa_total": 13.249999999999995,
-    "recompensa_descontada": 13.249999999999995,
-    "passos": 30,
-    "sucesso": false
-  },
-  {
-    "episodio": 31,
-    "recompensa_total": 15.4,
-    "recompensa_descontada": 15.4,
-    "passos": 30,
-    "sucesso": false
-  },
-  {
-    "episodio": 32,
-    "recompensa_total": 16.299999999999997,
-    "recompensa_descontada": 16.299999999999997,
-    "passos": 30,
-    "sucesso": false
-  },
-  {
-    "episodio": 33,
-    "recompensa_total": 12.799999999999999,
-    "recompensa_descontada": 12.799999999999999,
-    "passos": 28,
-    "sucesso": true
-  },
-  {
-    "episodio": 34,
-    "recompensa_total": 2.7499999999999996,
-    "recompensa_descontada": 2.7499999999999996,
-    "passos": 13,
-    "sucesso": true
-  },
-  {
-    "episodio": 35,
-    "recompensa_total": 2.5499999999999994,
-    "recompensa_descontada": 2.5499999999999994,
-    "passos": 14,
-    "sucesso": true
-  },
-  {
-    "episodio": 36,
-    "recompensa_total": 0.7499999999999996,
-    "recompensa_descontada": 0.7499999999999996,
-    "passos": 12,
-    "sucesso": true
-  },
-  {
-    "episodio": 37,
-    "recompensa_total": 1.9500000000000013,
-    "recompensa_descontada": 1.9500000000000013,
-    "passos": 19,
-    "sucesso": true
-  },
-  {
-    "episodio": 38,
-    "recompensa_total": 3.1499999999999995,
-    "recompensa_descontada": 3.1499999999999995,
+    "recompensa_total": 2.5500000000000003,
+    "recompensa_descontada": 2.5500000000000003,
     "passos": 15,
     "sucesso": true
   },
   {
-    "episodio": 39,
-    "recompensa_total": 14.199999999999996,
-    "recompensa_descontada": 14.199999999999996,
-    "passos": 30,
-    "sucesso": false
-  },
-  {
-    "episodio": 40,
-    "recompensa_total": 15.249999999999995,
-    "recompensa_descontada": 15.249999999999995,
-    "passos": 30,
-    "sucesso": false
-  },
-  {
-    "episodio": 41,
-    "recompensa_total": 10.000000000000002,
-    "recompensa_descontada": 10.000000000000002,
-    "passos": 30,
-    "sucesso": false
-  },
-  {
-    "episodio": 42,
-    "recompensa_total": 13.099999999999996,
-    "recompensa_descontada": 13.099999999999996,
-    "passos": 30,
-    "sucesso": false
-  },
-  {
-    "episodio": 43,
-    "recompensa_total": 10.949999999999996,
-    "recompensa_descontada": 10.949999999999996,
-    "passos": 30,
-    "sucesso": false
-  },
-  {
-    "episodio": 44,
-    "recompensa_total": 15.549999999999995,
-    "recompensa_descontada": 15.549999999999995,
-    "passos": 30,
-    "sucesso": false
-  },
-  {
-    "episodio": 45,
-    "recompensa_total": 14.200000000000003,
-    "recompensa_descontada": 14.200000000000003,
-    "passos": 30,
-    "sucesso": false
-  },
-  {
-    "episodio": 46,
-    "recompensa_total": 15.599999999999996,
-    "recompensa_descontada": 15.599999999999996,
-    "passos": 30,
-    "sucesso": false
-  },
-  {
-    "episodio": 47,
-    "recompensa_total": 14.000000000000004,
-    "recompensa_descontada": 14.000000000000004,
-    "passos": 30,
-    "sucesso": false
-  },
-  {
-    "episodio": 48,
-    "recompensa_total": 13.799999999999997,
-    "recompensa_descontada": 13.799999999999997,
-    "passos": 28,
+    "episodio": 28,
+    "recompensa_total": 5.2,
+    "recompensa_descontada": 5.2,
+    "passos": 20,
     "sucesso": true
   },
   {
-    "episodio": 49,
-    "recompensa_total": 0.7499999999999996,
-    "recompensa_descontada": 0.7499999999999996,
+    "episodio": 29,
+    "recompensa_total": 4.800000000000001,
+    "recompensa_descontada": 4.800000000000001,
+    "passos": 30,
+    "sucesso": true
+  },
+  {
+    "episodio": 30,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
     "passos": 12,
     "sucesso": true
   },
   {
-    "episodio": 50,
-    "recompensa_total": 0.7499999999999996,
-    "recompensa_descontada": 0.7499999999999996,
-    "passos": 12,
+    "episodio": 31,
+    "recompensa_total": 5.5,
+    "recompensa_descontada": 5.5,
+    "passos": 19,
     "sucesso": true
   },
   {
-    "episodio": 51,
-    "recompensa_total": 0.7499999999999998,
-    "recompensa_descontada": 0.7499999999999998,
-    "passos": 12,
-    "sucesso": true
-  },
-  {
-    "episodio": 52,
-    "recompensa_total": 1.4499999999999997,
-    "recompensa_descontada": 1.4499999999999997,
+    "episodio": 32,
+    "recompensa_total": 2.65,
+    "recompensa_descontada": 2.65,
     "passos": 14,
     "sucesso": true
   },
   {
-    "episodio": 53,
-    "recompensa_total": 2.7499999999999996,
-    "recompensa_descontada": 2.7499999999999996,
-    "passos": 30,
-    "sucesso": false
-  },
-  {
-    "episodio": 54,
-    "recompensa_total": 4.9,
-    "recompensa_descontada": 4.9,
-    "passos": 30,
-    "sucesso": false
-  },
-  {
-    "episodio": 55,
-    "recompensa_total": 4.649999999999999,
-    "recompensa_descontada": 4.649999999999999,
-    "passos": 30,
-    "sucesso": false
-  },
-  {
-    "episodio": 56,
-    "recompensa_total": -5.85,
-    "recompensa_descontada": -5.85,
-    "passos": 30,
-    "sucesso": false
-  },
-  {
-    "episodio": 57,
-    "recompensa_total": 11.149999999999999,
-    "recompensa_descontada": 11.149999999999999,
-    "passos": 30,
-    "sucesso": false
-  },
-  {
-    "episodio": 58,
-    "recompensa_total": 1.7499999999999996,
-    "recompensa_descontada": 1.7499999999999996,
-    "passos": 13,
+    "episodio": 33,
+    "recompensa_total": 5.7,
+    "recompensa_descontada": 5.7,
+    "passos": 15,
     "sucesso": true
   },
   {
-    "episodio": 59,
-    "recompensa_total": 0.7499999999999998,
-    "recompensa_descontada": 0.7499999999999998,
+    "episodio": 34,
+    "recompensa_total": 5.6000000000000005,
+    "recompensa_descontada": 5.6000000000000005,
+    "passos": 15,
+    "sucesso": true
+  },
+  {
+    "episodio": 35,
+    "recompensa_total": 5.5,
+    "recompensa_descontada": 5.5,
+    "passos": 16,
+    "sucesso": true
+  },
+  {
+    "episodio": 36,
+    "recompensa_total": 5.800000000000001,
+    "recompensa_descontada": 5.800000000000001,
+    "passos": 14,
+    "sucesso": true
+  },
+  {
+    "episodio": 37,
+    "recompensa_total": 5.7,
+    "recompensa_descontada": 5.7,
+    "passos": 14,
+    "sucesso": true
+  },
+  {
+    "episodio": 38,
+    "recompensa_total": 5.7,
+    "recompensa_descontada": 5.7,
+    "passos": 14,
+    "sucesso": true
+  },
+  {
+    "episodio": 39,
+    "recompensa_total": 2.85,
+    "recompensa_descontada": 2.85,
     "passos": 12,
     "sucesso": true
   },
   {
+    "episodio": 40,
+    "recompensa_total": 5.7,
+    "recompensa_descontada": 5.7,
+    "passos": 14,
+    "sucesso": true
+  },
+  {
+    "episodio": 41,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 42,
+    "recompensa_total": 5.300000000000001,
+    "recompensa_descontada": 5.300000000000001,
+    "passos": 19,
+    "sucesso": true
+  },
+  {
+    "episodio": 43,
+    "recompensa_total": 5.6000000000000005,
+    "recompensa_descontada": 5.6000000000000005,
+    "passos": 17,
+    "sucesso": true
+  },
+  {
+    "episodio": 44,
+    "recompensa_total": 5.6000000000000005,
+    "recompensa_descontada": 5.6000000000000005,
+    "passos": 14,
+    "sucesso": true
+  },
+  {
+    "episodio": 45,
+    "recompensa_total": 5.7,
+    "recompensa_descontada": 5.7,
+    "passos": 14,
+    "sucesso": true
+  },
+  {
+    "episodio": 46,
+    "recompensa_total": 5.5,
+    "recompensa_descontada": 5.5,
+    "passos": 19,
+    "sucesso": true
+  },
+  {
+    "episodio": 47,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 48,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 49,
+    "recompensa_total": 5.7,
+    "recompensa_descontada": 5.7,
+    "passos": 15,
+    "sucesso": true
+  },
+  {
+    "episodio": 50,
+    "recompensa_total": 5.7,
+    "recompensa_descontada": 5.7,
+    "passos": 14,
+    "sucesso": true
+  },
+  {
+    "episodio": 51,
+    "recompensa_total": 5.5,
+    "recompensa_descontada": 5.5,
+    "passos": 19,
+    "sucesso": true
+  },
+  {
+    "episodio": 52,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 53,
+    "recompensa_total": 5.7,
+    "recompensa_descontada": 5.7,
+    "passos": 14,
+    "sucesso": true
+  },
+  {
+    "episodio": 54,
+    "recompensa_total": 5.7,
+    "recompensa_descontada": 5.7,
+    "passos": 14,
+    "sucesso": true
+  },
+  {
+    "episodio": 55,
+    "recompensa_total": 2.85,
+    "recompensa_descontada": 2.85,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 56,
+    "recompensa_total": 5.800000000000001,
+    "recompensa_descontada": 5.800000000000001,
+    "passos": 14,
+    "sucesso": true
+  },
+  {
+    "episodio": 57,
+    "recompensa_total": 5.7,
+    "recompensa_descontada": 5.7,
+    "passos": 16,
+    "sucesso": true
+  },
+  {
+    "episodio": 58,
+    "recompensa_total": 2.6500000000000004,
+    "recompensa_descontada": 2.6500000000000004,
+    "passos": 14,
+    "sucesso": true
+  },
+  {
+    "episodio": 59,
+    "recompensa_total": 5.800000000000001,
+    "recompensa_descontada": 5.800000000000001,
+    "passos": 13,
+    "sucesso": true
+  },
+  {
     "episodio": 60,
-    "recompensa_total": 0.14999999999999947,
-    "recompensa_descontada": 0.14999999999999947,
+    "recompensa_total": 5.7,
+    "recompensa_descontada": 5.7,
     "passos": 14,
     "sucesso": true
   },
   {
     "episodio": 61,
-    "recompensa_total": 6.1499999999999995,
-    "recompensa_descontada": 6.1499999999999995,
-    "passos": 18,
-    "sucesso": true
-  },
-  {
-    "episodio": 62,
-    "recompensa_total": 4.0,
-    "recompensa_descontada": 4.0,
-    "passos": 17,
-    "sucesso": true
-  },
-  {
-    "episodio": 63,
-    "recompensa_total": 1.7499999999999993,
-    "recompensa_descontada": 1.7499999999999993,
-    "passos": 13,
-    "sucesso": true
-  },
-  {
-    "episodio": 64,
-    "recompensa_total": 0.7999999999999997,
-    "recompensa_descontada": 0.7999999999999997,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
     "passos": 12,
     "sucesso": true
   },
   {
+    "episodio": 62,
+    "recompensa_total": 5.7,
+    "recompensa_descontada": 5.7,
+    "passos": 14,
+    "sucesso": true
+  },
+  {
+    "episodio": 63,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 64,
+    "recompensa_total": 5.5,
+    "recompensa_descontada": 5.5,
+    "passos": 17,
+    "sucesso": true
+  },
+  {
     "episodio": 65,
-    "recompensa_total": 1.7499999999999993,
-    "recompensa_descontada": 1.7499999999999993,
-    "passos": 13,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
     "sucesso": true
   },
   {
     "episodio": 66,
-    "recompensa_total": 1.9499999999999997,
-    "recompensa_descontada": 1.9499999999999997,
+    "recompensa_total": 2.85,
+    "recompensa_descontada": 2.85,
     "passos": 12,
     "sucesso": true
   },
   {
     "episodio": 67,
-    "recompensa_total": 1.9499999999999997,
-    "recompensa_descontada": 1.9499999999999997,
-    "passos": 12,
-    "sucesso": true
-  },
-  {
-    "episodio": 68,
-    "recompensa_total": 3.899999999999999,
-    "recompensa_descontada": 3.899999999999999,
+    "recompensa_total": 5.0,
+    "recompensa_descontada": 5.0,
     "passos": 28,
     "sucesso": true
   },
   {
-    "episodio": 69,
-    "recompensa_total": 16.949999999999996,
-    "recompensa_descontada": 16.949999999999996,
-    "passos": 29,
-    "sucesso": true
-  },
-  {
-    "episodio": 70,
-    "recompensa_total": 2.3499999999999996,
-    "recompensa_descontada": 2.3499999999999996,
-    "passos": 15,
-    "sucesso": true
-  },
-  {
-    "episodio": 71,
-    "recompensa_total": 7.15,
-    "recompensa_descontada": 7.15,
-    "passos": 18,
-    "sucesso": true
-  },
-  {
-    "episodio": 72,
-    "recompensa_total": 7.0,
-    "recompensa_descontada": 7.0,
-    "passos": 19,
-    "sucesso": true
-  },
-  {
-    "episodio": 73,
-    "recompensa_total": 0.7499999999999993,
-    "recompensa_descontada": 0.7499999999999993,
-    "passos": 12,
-    "sucesso": true
-  },
-  {
-    "episodio": 74,
-    "recompensa_total": 1.9499999999999997,
-    "recompensa_descontada": 1.9499999999999997,
-    "passos": 12,
-    "sucesso": true
-  },
-  {
-    "episodio": 75,
-    "recompensa_total": 1.9499999999999997,
-    "recompensa_descontada": 1.9499999999999997,
-    "passos": 12,
-    "sucesso": true
-  },
-  {
-    "episodio": 76,
-    "recompensa_total": 1.9499999999999997,
-    "recompensa_descontada": 1.9499999999999997,
-    "passos": 12,
-    "sucesso": true
-  },
-  {
-    "episodio": 77,
-    "recompensa_total": 1.9499999999999997,
-    "recompensa_descontada": 1.9499999999999997,
-    "passos": 12,
-    "sucesso": true
-  },
-  {
-    "episodio": 78,
-    "recompensa_total": 2.3999999999999995,
-    "recompensa_descontada": 2.3999999999999995,
-    "passos": 15,
-    "sucesso": true
-  },
-  {
-    "episodio": 79,
-    "recompensa_total": 1.7499999999999996,
-    "recompensa_descontada": 1.7499999999999996,
-    "passos": 13,
-    "sucesso": true
-  },
-  {
-    "episodio": 80,
-    "recompensa_total": 0.7499999999999996,
-    "recompensa_descontada": 0.7499999999999996,
-    "passos": 12,
-    "sucesso": true
-  },
-  {
-    "episodio": 81,
-    "recompensa_total": 0.9499999999999995,
-    "recompensa_descontada": 0.9499999999999995,
-    "passos": 17,
-    "sucesso": true
-  },
-  {
-    "episodio": 82,
-    "recompensa_total": 13.250000000000002,
-    "recompensa_descontada": 13.250000000000002,
+    "episodio": 68,
+    "recompensa_total": -1.6000000000000003,
+    "recompensa_descontada": -1.6000000000000003,
     "passos": 30,
     "sucesso": false
   },
   {
+    "episodio": 69,
+    "recompensa_total": 2.6500000000000004,
+    "recompensa_descontada": 2.6500000000000004,
+    "passos": 14,
+    "sucesso": true
+  },
+  {
+    "episodio": 70,
+    "recompensa_total": 2.85,
+    "recompensa_descontada": 2.85,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 71,
+    "recompensa_total": 3.9,
+    "recompensa_descontada": 3.9,
+    "passos": 30,
+    "sucesso": true
+  },
+  {
+    "episodio": 72,
+    "recompensa_total": -2.2000000000000006,
+    "recompensa_descontada": -2.2000000000000006,
+    "passos": 30,
+    "sucesso": false
+  },
+  {
+    "episodio": 73,
+    "recompensa_total": 4.7,
+    "recompensa_descontada": 4.7,
+    "passos": 22,
+    "sucesso": true
+  },
+  {
+    "episodio": 74,
+    "recompensa_total": -2.1000000000000005,
+    "recompensa_descontada": -2.1000000000000005,
+    "passos": 30,
+    "sucesso": false
+  },
+  {
+    "episodio": 75,
+    "recompensa_total": -2.800000000000001,
+    "recompensa_descontada": -2.800000000000001,
+    "passos": 30,
+    "sucesso": false
+  },
+  {
+    "episodio": 76,
+    "recompensa_total": -2.2000000000000006,
+    "recompensa_descontada": -2.2000000000000006,
+    "passos": 30,
+    "sucesso": false
+  },
+  {
+    "episodio": 77,
+    "recompensa_total": -1.2,
+    "recompensa_descontada": -1.2,
+    "passos": 30,
+    "sucesso": false
+  },
+  {
+    "episodio": 78,
+    "recompensa_total": -1.8000000000000005,
+    "recompensa_descontada": -1.8000000000000005,
+    "passos": 30,
+    "sucesso": false
+  },
+  {
+    "episodio": 79,
+    "recompensa_total": 1.2499999999999998,
+    "recompensa_descontada": 1.2499999999999998,
+    "passos": 27,
+    "sucesso": true
+  },
+  {
+    "episodio": 80,
+    "recompensa_total": -2.500000000000001,
+    "recompensa_descontada": -2.500000000000001,
+    "passos": 30,
+    "sucesso": false
+  },
+  {
+    "episodio": 81,
+    "recompensa_total": -2.0000000000000004,
+    "recompensa_descontada": -2.0000000000000004,
+    "passos": 30,
+    "sucesso": false
+  },
+  {
+    "episodio": 82,
+    "recompensa_total": 1.2499999999999998,
+    "recompensa_descontada": 1.2499999999999998,
+    "passos": 26,
+    "sucesso": true
+  },
+  {
     "episodio": 83,
-    "recompensa_total": 15.0,
-    "recompensa_descontada": 15.0,
+    "recompensa_total": -3.0000000000000013,
+    "recompensa_descontada": -3.0000000000000013,
     "passos": 30,
     "sucesso": false
   },
   {
     "episodio": 84,
-    "recompensa_total": 2.5499999999999994,
-    "recompensa_descontada": 2.5499999999999994,
-    "passos": 14,
+    "recompensa_total": 1.1499999999999997,
+    "recompensa_descontada": 1.1499999999999997,
+    "passos": 26,
     "sucesso": true
   },
   {
     "episodio": 85,
-    "recompensa_total": 1.3499999999999994,
-    "recompensa_descontada": 1.3499999999999994,
-    "passos": 14,
+    "recompensa_total": 1.9500000000000002,
+    "recompensa_descontada": 1.9500000000000002,
+    "passos": 22,
     "sucesso": true
   },
   {
     "episodio": 86,
-    "recompensa_total": 5.8,
-    "recompensa_descontada": 5.8,
+    "recompensa_total": 2.0500000000000003,
+    "recompensa_descontada": 2.0500000000000003,
     "passos": 19,
     "sucesso": true
   },
   {
     "episodio": 87,
-    "recompensa_total": 4.35,
-    "recompensa_descontada": 4.35,
-    "passos": 16,
+    "recompensa_total": 2.1500000000000004,
+    "recompensa_descontada": 2.1500000000000004,
+    "passos": 18,
     "sucesso": true
   },
   {
     "episodio": 88,
-    "recompensa_total": 0.7499999999999996,
-    "recompensa_descontada": 0.7499999999999996,
-    "passos": 12,
-    "sucesso": true
+    "recompensa_total": -2.3000000000000007,
+    "recompensa_descontada": -2.3000000000000007,
+    "passos": 30,
+    "sucesso": false
   },
   {
     "episodio": 89,
-    "recompensa_total": 1.7499999999999998,
-    "recompensa_descontada": 1.7499999999999998,
-    "passos": 13,
-    "sucesso": true
-  },
-  {
-    "episodio": 90,
-    "recompensa_total": 3.55,
-    "recompensa_descontada": 3.55,
-    "passos": 15,
-    "sucesso": true
-  },
-  {
-    "episodio": 91,
-    "recompensa_total": 2.55,
-    "recompensa_descontada": 2.55,
+    "recompensa_total": 2.65,
+    "recompensa_descontada": 2.65,
     "passos": 14,
     "sucesso": true
   },
   {
-    "episodio": 92,
-    "recompensa_total": 1.9499999999999997,
-    "recompensa_descontada": 1.9499999999999997,
+    "episodio": 90,
+    "recompensa_total": 2.6500000000000004,
+    "recompensa_descontada": 2.6500000000000004,
+    "passos": 13,
+    "sucesso": true
+  },
+  {
+    "episodio": 91,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
     "passos": 12,
     "sucesso": true
   },
   {
+    "episodio": 92,
+    "recompensa_total": 5.800000000000001,
+    "recompensa_descontada": 5.800000000000001,
+    "passos": 13,
+    "sucesso": true
+  },
+  {
     "episodio": 93,
-    "recompensa_total": 10.95,
-    "recompensa_descontada": 10.95,
-    "passos": 22,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
     "sucesso": true
   },
   {
     "episodio": 94,
-    "recompensa_total": 13.699999999999998,
-    "recompensa_descontada": 13.699999999999998,
-    "passos": 30,
-    "sucesso": false
+    "recompensa_total": 5.800000000000001,
+    "recompensa_descontada": 5.800000000000001,
+    "passos": 14,
+    "sucesso": true
   },
   {
     "episodio": 95,
-    "recompensa_total": 16.249999999999993,
-    "recompensa_descontada": 16.249999999999993,
-    "passos": 30,
-    "sucesso": false
+    "recompensa_total": 2.85,
+    "recompensa_descontada": 2.85,
+    "passos": 13,
+    "sucesso": true
   },
   {
     "episodio": 96,
-    "recompensa_total": 12.099999999999996,
-    "recompensa_descontada": 12.099999999999996,
-    "passos": 30,
-    "sucesso": false
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
   },
   {
     "episodio": 97,
-    "recompensa_total": 14.449999999999994,
-    "recompensa_descontada": 14.449999999999994,
-    "passos": 30,
-    "sucesso": false
+    "recompensa_total": 5.7,
+    "recompensa_descontada": 5.7,
+    "passos": 14,
+    "sucesso": true
   },
   {
     "episodio": 98,
-    "recompensa_total": -5.349999999999998,
-    "recompensa_descontada": -5.349999999999998,
-    "passos": 30,
-    "sucesso": false
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
   },
   {
     "episodio": 99,
-    "recompensa_total": 5.1499999999999995,
-    "recompensa_descontada": 5.1499999999999995,
-    "passos": 22,
+    "recompensa_total": 5.800000000000001,
+    "recompensa_descontada": 5.800000000000001,
+    "passos": 14,
     "sucesso": true
   },
   {
     "episodio": 100,
-    "recompensa_total": 4.6,
-    "recompensa_descontada": 4.6,
+    "recompensa_total": 5.4,
+    "recompensa_descontada": 5.4,
+    "passos": 18,
+    "sucesso": true
+  },
+  {
+    "episodio": 101,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 102,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 103,
+    "recompensa_total": 5.7,
+    "recompensa_descontada": 5.7,
+    "passos": 14,
+    "sucesso": true
+  },
+  {
+    "episodio": 104,
+    "recompensa_total": 2.75,
+    "recompensa_descontada": 2.75,
+    "passos": 13,
+    "sucesso": true
+  },
+  {
+    "episodio": 105,
+    "recompensa_total": 5.4,
+    "recompensa_descontada": 5.4,
+    "passos": 22,
+    "sucesso": true
+  },
+  {
+    "episodio": 106,
+    "recompensa_total": 5.6000000000000005,
+    "recompensa_descontada": 5.6000000000000005,
+    "passos": 18,
+    "sucesso": true
+  },
+  {
+    "episodio": 107,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 108,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 109,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 110,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 111,
+    "recompensa_total": 5.7,
+    "recompensa_descontada": 5.7,
+    "passos": 14,
+    "sucesso": true
+  },
+  {
+    "episodio": 112,
+    "recompensa_total": 2.85,
+    "recompensa_descontada": 2.85,
+    "passos": 13,
+    "sucesso": true
+  },
+  {
+    "episodio": 113,
+    "recompensa_total": -1.2,
+    "recompensa_descontada": -1.2,
+    "passos": 30,
+    "sucesso": false
+  },
+  {
+    "episodio": 114,
+    "recompensa_total": 2.5500000000000003,
+    "recompensa_descontada": 2.5500000000000003,
+    "passos": 17,
+    "sucesso": true
+  },
+  {
+    "episodio": 115,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 116,
+    "recompensa_total": -2.3000000000000007,
+    "recompensa_descontada": -2.3000000000000007,
+    "passos": 30,
+    "sucesso": false
+  },
+  {
+    "episodio": 117,
+    "recompensa_total": -2.500000000000001,
+    "recompensa_descontada": -2.500000000000001,
+    "passos": 30,
+    "sucesso": false
+  },
+  {
+    "episodio": 118,
+    "recompensa_total": -2.500000000000001,
+    "recompensa_descontada": -2.500000000000001,
+    "passos": 30,
+    "sucesso": false
+  },
+  {
+    "episodio": 119,
+    "recompensa_total": -2.1000000000000005,
+    "recompensa_descontada": -2.1000000000000005,
+    "passos": 30,
+    "sucesso": false
+  },
+  {
+    "episodio": 120,
+    "recompensa_total": 4.9,
+    "recompensa_descontada": 4.9,
+    "passos": 28,
+    "sucesso": true
+  },
+  {
+    "episodio": 121,
+    "recompensa_total": 5.4,
+    "recompensa_descontada": 5.4,
+    "passos": 21,
+    "sucesso": true
+  },
+  {
+    "episodio": 122,
+    "recompensa_total": 2.6500000000000004,
+    "recompensa_descontada": 2.6500000000000004,
+    "passos": 14,
+    "sucesso": true
+  },
+  {
+    "episodio": 123,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 124,
+    "recompensa_total": 2.85,
+    "recompensa_descontada": 2.85,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 125,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 126,
+    "recompensa_total": 5.7,
+    "recompensa_descontada": 5.7,
+    "passos": 14,
+    "sucesso": true
+  },
+  {
+    "episodio": 127,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 128,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 129,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 130,
+    "recompensa_total": 5.7,
+    "recompensa_descontada": 5.7,
+    "passos": 14,
+    "sucesso": true
+  },
+  {
+    "episodio": 131,
+    "recompensa_total": 2.85,
+    "recompensa_descontada": 2.85,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 132,
+    "recompensa_total": 5.5,
+    "recompensa_descontada": 5.5,
     "passos": 20,
+    "sucesso": true
+  },
+  {
+    "episodio": 133,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 134,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 135,
+    "recompensa_total": 5.7,
+    "recompensa_descontada": 5.7,
+    "passos": 13,
+    "sucesso": true
+  },
+  {
+    "episodio": 136,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 137,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 138,
+    "recompensa_total": 5.7,
+    "recompensa_descontada": 5.7,
+    "passos": 14,
+    "sucesso": true
+  },
+  {
+    "episodio": 139,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 140,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 141,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 142,
+    "recompensa_total": 5.5,
+    "recompensa_descontada": 5.5,
+    "passos": 16,
+    "sucesso": true
+  },
+  {
+    "episodio": 143,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 144,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 145,
+    "recompensa_total": 5.7,
+    "recompensa_descontada": 5.7,
+    "passos": 13,
+    "sucesso": true
+  },
+  {
+    "episodio": 146,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 147,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 148,
+    "recompensa_total": 5.5,
+    "recompensa_descontada": 5.5,
+    "passos": 16,
+    "sucesso": true
+  },
+  {
+    "episodio": 149,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 150,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 151,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 152,
+    "recompensa_total": 2.85,
+    "recompensa_descontada": 2.85,
+    "passos": 13,
+    "sucesso": true
+  },
+  {
+    "episodio": 153,
+    "recompensa_total": 5.7,
+    "recompensa_descontada": 5.7,
+    "passos": 14,
+    "sucesso": true
+  },
+  {
+    "episodio": 154,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 155,
+    "recompensa_total": 2.85,
+    "recompensa_descontada": 2.85,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 156,
+    "recompensa_total": 5.6000000000000005,
+    "recompensa_descontada": 5.6000000000000005,
+    "passos": 16,
+    "sucesso": true
+  },
+  {
+    "episodio": 157,
+    "recompensa_total": 4.800000000000001,
+    "recompensa_descontada": 4.800000000000001,
+    "passos": 29,
+    "sucesso": true
+  },
+  {
+    "episodio": 158,
+    "recompensa_total": 5.7,
+    "recompensa_descontada": 5.7,
+    "passos": 15,
+    "sucesso": true
+  },
+  {
+    "episodio": 159,
+    "recompensa_total": 1.8500000000000003,
+    "recompensa_descontada": 1.8500000000000003,
+    "passos": 20,
+    "sucesso": true
+  },
+  {
+    "episodio": 160,
+    "recompensa_total": 5.0,
+    "recompensa_descontada": 5.0,
+    "passos": 26,
+    "sucesso": true
+  },
+  {
+    "episodio": 161,
+    "recompensa_total": 2.6500000000000004,
+    "recompensa_descontada": 2.6500000000000004,
+    "passos": 14,
+    "sucesso": true
+  },
+  {
+    "episodio": 162,
+    "recompensa_total": 5.4,
+    "recompensa_descontada": 5.4,
+    "passos": 17,
+    "sucesso": true
+  },
+  {
+    "episodio": 163,
+    "recompensa_total": 5.800000000000001,
+    "recompensa_descontada": 5.800000000000001,
+    "passos": 14,
+    "sucesso": true
+  },
+  {
+    "episodio": 164,
+    "recompensa_total": 5.800000000000001,
+    "recompensa_descontada": 5.800000000000001,
+    "passos": 14,
+    "sucesso": true
+  },
+  {
+    "episodio": 165,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 166,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 167,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 168,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 169,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 170,
+    "recompensa_total": 2.6500000000000004,
+    "recompensa_descontada": 2.6500000000000004,
+    "passos": 14,
+    "sucesso": true
+  },
+  {
+    "episodio": 171,
+    "recompensa_total": 2.45,
+    "recompensa_descontada": 2.45,
+    "passos": 16,
+    "sucesso": true
+  },
+  {
+    "episodio": 172,
+    "recompensa_total": -1.2,
+    "recompensa_descontada": -1.2,
+    "passos": 30,
+    "sucesso": false
+  },
+  {
+    "episodio": 173,
+    "recompensa_total": -1.9000000000000006,
+    "recompensa_descontada": -1.9000000000000006,
+    "passos": 30,
+    "sucesso": false
+  },
+  {
+    "episodio": 174,
+    "recompensa_total": -2.800000000000001,
+    "recompensa_descontada": -2.800000000000001,
+    "passos": 30,
+    "sucesso": false
+  },
+  {
+    "episodio": 175,
+    "recompensa_total": 1.0499999999999996,
+    "recompensa_descontada": 1.0499999999999996,
+    "passos": 27,
+    "sucesso": true
+  },
+  {
+    "episodio": 176,
+    "recompensa_total": 2.75,
+    "recompensa_descontada": 2.75,
+    "passos": 13,
+    "sucesso": true
+  },
+  {
+    "episodio": 177,
+    "recompensa_total": 2.45,
+    "recompensa_descontada": 2.45,
+    "passos": 16,
+    "sucesso": true
+  },
+  {
+    "episodio": 178,
+    "recompensa_total": 2.35,
+    "recompensa_descontada": 2.35,
+    "passos": 17,
+    "sucesso": true
+  },
+  {
+    "episodio": 179,
+    "recompensa_total": 2.25,
+    "recompensa_descontada": 2.25,
+    "passos": 18,
+    "sucesso": true
+  },
+  {
+    "episodio": 180,
+    "recompensa_total": 2.6500000000000004,
+    "recompensa_descontada": 2.6500000000000004,
+    "passos": 14,
+    "sucesso": true
+  },
+  {
+    "episodio": 181,
+    "recompensa_total": 2.5500000000000003,
+    "recompensa_descontada": 2.5500000000000003,
+    "passos": 15,
+    "sucesso": true
+  },
+  {
+    "episodio": 182,
+    "recompensa_total": 2.85,
+    "recompensa_descontada": 2.85,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 183,
+    "recompensa_total": 5.2,
+    "recompensa_descontada": 5.2,
+    "passos": 22,
+    "sucesso": true
+  },
+  {
+    "episodio": 184,
+    "recompensa_total": 2.6500000000000004,
+    "recompensa_descontada": 2.6500000000000004,
+    "passos": 14,
+    "sucesso": true
+  },
+  {
+    "episodio": 185,
+    "recompensa_total": 5.5,
+    "recompensa_descontada": 5.5,
+    "passos": 16,
+    "sucesso": true
+  },
+  {
+    "episodio": 186,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 187,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 188,
+    "recompensa_total": 5.800000000000001,
+    "recompensa_descontada": 5.800000000000001,
+    "passos": 13,
+    "sucesso": true
+  },
+  {
+    "episodio": 189,
+    "recompensa_total": 5.7,
+    "recompensa_descontada": 5.7,
+    "passos": 14,
+    "sucesso": true
+  },
+  {
+    "episodio": 190,
+    "recompensa_total": 2.85,
+    "recompensa_descontada": 2.85,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 191,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 192,
+    "recompensa_total": 5.800000000000001,
+    "recompensa_descontada": 5.800000000000001,
+    "passos": 13,
+    "sucesso": true
+  },
+  {
+    "episodio": 193,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 194,
+    "recompensa_total": 5.800000000000001,
+    "recompensa_descontada": 5.800000000000001,
+    "passos": 13,
+    "sucesso": true
+  },
+  {
+    "episodio": 195,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 196,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 197,
+    "recompensa_total": 5.800000000000001,
+    "recompensa_descontada": 5.800000000000001,
+    "passos": 13,
+    "sucesso": true
+  },
+  {
+    "episodio": 198,
+    "recompensa_total": 5.6000000000000005,
+    "recompensa_descontada": 5.6000000000000005,
+    "passos": 15,
+    "sucesso": true
+  },
+  {
+    "episodio": 199,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
+    "sucesso": true
+  },
+  {
+    "episodio": 200,
+    "recompensa_total": 5.9,
+    "recompensa_descontada": 5.9,
+    "passos": 12,
     "sucesso": true
   }
 ]

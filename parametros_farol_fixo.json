@@ -4,8 +4,8 @@
   "gamma_desconto": 0.9,
   "ficheiro_metricas": "metricas/farol/metricas_farol_fixo.json",
   "render": false,
-  "render_window": true,
-  "render_sleep": 1.0,
+  "render_window": false,
+  "render_sleep": 0.0,
   "ambiente": {
     "tipo": "farol",
     "largura": 7,

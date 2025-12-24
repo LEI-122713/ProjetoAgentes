@@ -5,7 +5,7 @@
   "ficheiro_metricas": "metricas/foraging/metricas_foraging_q_learning.json",
   "render": false,
   "render_window": false,
-  "render_sleep": 0.0,
+  "render_sleep": 0.5,
   "ambiente": {
     "tipo": "foraging",
     "largura": 8,

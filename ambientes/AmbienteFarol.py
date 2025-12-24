@@ -18,7 +18,7 @@ class AmbienteFarol(Ambiente):
     def adicionaAgente(self, agente, posicao_inicial=(0, 0)):
         self.posicoes_agentes[agente] = posicao_inicial
         self.posicoes_iniciais[agente] = posicao_inicial
-        # etiqueta simples e única para mostrar na grelha
+        # etiqueta simples e unica para mostrar na grelha
         idx = len(self._labels_agentes)
         self._labels_agentes[agente] = chr(ord("A") + idx)
 
@@ -31,7 +31,7 @@ class AmbienteFarol(Ambiente):
         return Observacao({
             "posicao": (x, y),
             "dir_farol": (lx - x, ly - y),
-            "movimentos_validos": mov_validos
+            "movimentos_validos": mov_validos,
         })
 
     def _celula_livre(self, x, y):
@@ -64,22 +64,27 @@ class AmbienteFarol(Ambiente):
             pos_validada = (x + 1, y)
         if accao.tipo == "O" and self._celula_livre(x - 1, y):
             pos_validada = (x - 1, y)
-        # "F" fica no sítio por definição
+        # "F" fica no sitio por definicao
 
         self.posicoes_agentes[agente] = pos_validada
 
         chegou = pos_validada == self.pos_farol
-        if self._todos_no_farol():
+        terminou = self._todos_no_farol()
+        if terminou:
             self._terminou = True
 
-        # recompensa base
-        recompensa = 1.0 if chegou else -0.1
+        # custo por passo
+        recompensa = -0.05
 
-        # penalização extra se ficou parado ou bateu
+        # se chegou mas ainda nao terminou, nao ganha bonus por ficar no farol
+        if chegou and not terminou:
+            recompensa = 0.0
+
+        # penalizacao extra se ficou parado ou bateu (só fora do farol)
         if pos_validada == (x, y) and not chegou:
-            recompensa -= 0.1
+            recompensa -= 0.05
 
-        # shaping leve: recompensa se aproximou do farol, penalização se afastou
+        # shaping leve: recompensa se aproximou do farol, penalizacao se afastou
         if not chegou:
             dist_depois = abs(self.pos_farol[0] - pos_validada[0]) + abs(self.pos_farol[1] - pos_validada[1])
             if dist_depois < dist_antes:
@@ -87,17 +92,21 @@ class AmbienteFarol(Ambiente):
             elif dist_depois > dist_antes:
                 recompensa -= 0.05
 
+        # bonus final apenas quando todos chegam
+        if terminou:
+            recompensa += 3.0
+
         return {"recompensa": recompensa, "terminou": self._terminou}
 
     def atualizacao(self):
-        # Aqui poderíamos atualizar recursos/obstáculos; para já nada a fazer.
+        # Sem dinamica extra por agora
         pass
 
     def terminou(self):
         return self._terminou
 
     def reset(self):
-        # Recoloca agentes nas posições iniciais e limpa estado de término
+        # Recoloca agentes nas posicoes iniciais e limpa estado de termino
         for agente, pos in self.posicoes_iniciais.items():
             self.posicoes_agentes[agente] = pos
         self._terminou = False
@@ -105,7 +114,7 @@ class AmbienteFarol(Ambiente):
     def render(self):
         grelha = [["." for _ in range(self.largura)] for _ in range(self.altura)]
 
-        # Obstáculos
+        # Obstaculos
         for (ox, oy) in self.obstaculos:
             grelha[oy][ox] = "#"
 

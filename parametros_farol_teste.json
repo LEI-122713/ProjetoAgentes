@@ -1,10 +1,10 @@
 {
-  "episodios": 10,
+  "episodios": 100,
   "max_passos": 30,
   "gamma_desconto": 0.9,
   "ficheiro_metricas": "metricas/farol/metricas_farol_politica_fixa.json",
   "render": true,
-  "render_window": true,
+  "render_window": false,
   "render_sleep": 0.0,
   "ambiente": {
     "tipo": "farol",

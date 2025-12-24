@@ -1,5 +1,5 @@
 {
-  "episodios": 100,
+  "episodios": 200,
   "max_passos": 30,
   "ficheiro_metricas": "metricas/farol/metricas_farol_q_learning.json",
   "render": true,
@@ -19,11 +19,11 @@
       "posicao_inicial": [0, 0],
       "modo": "aprendizagem",
       "q_table": "q_farol_A1.json",
-      "epsilon": 0.3,
+      "epsilon": 0.4,
       "alpha": 0.5,
-      "gamma": 0.9,
+      "gamma": 0.95,
       "epsilon_min": 0.05,
-      "epsilon_decay": 0.995
+      "epsilon_decay": 0.998
     },
     {
       "nome": "A2",
@@ -31,11 +31,11 @@
       "posicao_inicial": [0, 1],
       "modo": "aprendizagem",
       "q_table": "q_farol_A2.json",
-      "epsilon": 0.3,
+      "epsilon": 0.4,
       "alpha": 0.5,
-      "gamma": 0.9,
+      "gamma": 0.95,
       "epsilon_min": 0.05,
-      "epsilon_decay": 0.995
+      "epsilon_decay": 0.998
     }
   ]
 }
