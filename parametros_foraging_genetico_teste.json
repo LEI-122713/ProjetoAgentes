@@ -1,0 +1,66 @@
+{
+  "max_passos": 100,
+  "episodios": 200,
+  "gamma_desconto": 0.9,
+  "ficheiro_metricas": "metricas/foraging/metricas_foraging_genetico_teste.json",
+  "render": false,
+  "render_window": false,
+  "render_sleep": 0.0,
+  "ambiente": {
+    "tipo": "foraging",
+    "largura": 8,
+    "altura": 8,
+    "recursos": [[5, 1], [1, 6], [6, 5]],
+    "valores_recursos": {
+      "[5, 1]": 2.0,
+      "[1, 6]": 1.0,
+      "[6, 5]": 3.0
+    },
+    "ninhos": [[0, 0]],
+    "obstaculos": [[3, 3], [3, 4], [4, 3]]
+  },
+  "agentes": [
+    {
+      "nome": "FG1",
+      "tipo": "foraging",
+      "algoritmo": "genetico",
+      "modo": "teste",
+      "posicao_inicial": [0, 1],
+      "ficheiro_genoma": "genoma_foraging_F1.json",
+      "populacao": 30,
+      "elitismo": 8,
+      "taxa_mutacao": 0.12,
+      "prob_cruzamento": 0.9,
+      "episodios_por_individuo": 3,
+      "bonus_sucesso": 120.0,
+      "penalizacao_passos": 0.2,
+      "penalizacao_distancia": 2.0,
+      "bonus_melhoria_distancia": 0.5,
+      "penalizacao_afastamento": 1.5,
+      "tamanho_torneio": 5,
+      "stall_max": 1,
+      "heuristic_seeds": 6
+    },
+    {
+      "nome": "FG2",
+      "tipo": "foraging",
+      "algoritmo": "genetico",
+      "modo": "teste",
+      "posicao_inicial": [1, 0],
+      "ficheiro_genoma": "genoma_foraging_F2.json",
+      "populacao": 30,
+      "elitismo": 8,
+      "taxa_mutacao": 0.12,
+      "prob_cruzamento": 0.9,
+      "episodios_por_individuo": 3,
+      "bonus_sucesso": 120.0,
+      "penalizacao_passos": 0.2,
+      "penalizacao_distancia": 2.0,
+      "bonus_melhoria_distancia": 0.5,
+      "penalizacao_afastamento": 1.5,
+      "tamanho_torneio": 5,
+      "stall_max": 1,
+      "heuristic_seeds": 6
+    }
+  ]
+}

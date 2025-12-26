@@ -1,8 +1,8 @@
 {
-  "episodios": 100,
+  "episodios": 200,
   "max_passos": 30,
   "gamma_desconto": 0.9,
-  "ficheiro_metricas": "metricas/farol/metricas_farol_politica_fixa.json",
+  "ficheiro_metricas": "metricas/farol/metricas_farol_q_learning_teste.json",
   "render": true,
   "render_window": false,
   "render_sleep": 0.0,

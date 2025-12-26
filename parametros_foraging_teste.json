@@ -1,11 +1,11 @@
 {
-  "episodios": 10,
+  "episodios": 200,
   "max_passos": 100,
   "gamma_desconto": 0.9,
-  "ficheiro_metricas": "metricas/foraging/metricas_foraging_politica_fixa.json",
+  "ficheiro_metricas": "metricas/foraging/metricas_foraging_q_learning_teste.json",
   "render": false,
-  "render_window": true,
-  "render_sleep": 0.3,
+  "render_window": false,
+  "render_sleep": 0.0,
   "ambiente": {
     "tipo": "foraging",
     "largura": 8,

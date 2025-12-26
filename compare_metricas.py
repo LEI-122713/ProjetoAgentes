@@ -44,25 +44,18 @@ def _mostra(label, resumo):
 
 
 def main():
-    if len(sys.argv) != 3:
-        print("Uso: python3 compare_metricas.py <metricas_aprendizagem.json> <metricas_teste.json>")
+    if len(sys.argv) < 2:
+        print("Uso: python3 compare_metricas.py <metricas1.json> [metricas2.json ...]")
         sys.exit(1)
 
-    m1_path = Path(sys.argv[1])
-    m2_path = Path(sys.argv[2])
-
-    if not m1_path.exists() or not m2_path.exists():
-        print("Erro: ficheiro(s) de métricas não encontrados.")
-        sys.exit(1)
-
-    m1 = _carrega_metricas(m1_path)
-    m2 = _carrega_metricas(m2_path)
-
-    r1 = _resume(m1)
-    r2 = _resume(m2)
-
-    _mostra(m1_path.name, r1)
-    _mostra(m2_path.name, r2)
+    for caminho in sys.argv[1:]:
+        m_path = Path(caminho)
+        if not m_path.exists():
+            print(f"Erro: ficheiro de métricas não encontrado: {m_path}")
+            continue
+        metricas = _carrega_metricas(m_path)
+        resumo = _resume(metricas)
+        _mostra(m_path.name, resumo)
 
 
 if __name__ == "__main__":
